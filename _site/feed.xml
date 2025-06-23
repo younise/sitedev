@@ -1,0 +1,143 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>emadyounis.com</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2025-06-22T20:04:48-07:00</updated>
+  <author>
+    <name>emad younis</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 emad younis </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Overview of Azure VMware Solution Next Evolution</title>
+    <link href="http://localhost:4000/overview-of-azure-vmware-solution-next-evolution/" rel="alternate" type="text/html" title="Overview of Azure VMware Solution Next Evolution" />
+    <published>2020-09-23T11:20:22-07:00</published>
+  
+    <updated>2021-03-18T12:00:00-07:00</updated>
+  
+    <id>http://localhost:4000/overview-of-azure-vmware-solution-next-evolution/</id>
+    <content type="text/html" src="http://localhost:4000/overview-of-azure-vmware-solution-next-evolution/" />
+    <author>
+      <name>eyounis</name>
+    </author>
+
+  
+    
+    <category term="Azure VMware Solution" />
+    
+  
+
+  <summary>The general availability (GA) for the next evolution of Azure VMware Solution (AVS) was announced yesterday during the Microsoft Ignite 2020 virtual conference. This is a joint partnership between Microsoft and VMware, where Azure VMware Solution is a Microsoft managed service built on Azure bare metal infrastructure and cloud verified by VMware. The initial launch of the Azure VMware Solution ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Introduction to Google Cloud VMware Engine</title>
+    <link href="http://localhost:4000/introduction-to-google-cloud-vmware-engine/" rel="alternate" type="text/html" title="Introduction to Google Cloud VMware Engine" />
+    <published>2020-07-06T11:22:26-07:00</published>
+  
+    <updated>2020-07-06T11:22:26-07:00</updated>
+  
+    <id>http://localhost:4000/introduction-to-google-cloud-vmware-engine/</id>
+    <content type="text/html" src="http://localhost:4000/introduction-to-google-cloud-vmware-engine/" />
+    <author>
+      <name>eyounis</name>
+    </author>
+
+  
+    
+    <category term="Google Cloud VMware Engine" />
+    
+  
+
+  <summary>Last month Google announced a first-party and fully managed solution called Google Cloud VMware Engine (GCVE), which was in limited early access since January 2020. Google Cloud VMware Engine is now generally available to all starting in US-east and US-west regions with plans to add eight more regions by the end of the year. When deployed, customers will receive a GCVE private cloud, which cons...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Uniquely Identifying Virtual Machines In VMware HCX</title>
+    <link href="http://localhost:4000/uniquely-identifying-virtual-machines-in-vmware-hcx/" rel="alternate" type="text/html" title="Uniquely Identifying Virtual Machines In VMware HCX" />
+    <published>2020-03-17T08:12:40-07:00</published>
+  
+    <updated>2020-03-17T08:12:40-07:00</updated>
+  
+    <id>http://localhost:4000/uniquely-identifying-virtual-machines-in-vmware-hcx/</id>
+    <content type="text/html" src="http://localhost:4000/uniquely-identifying-virtual-machines-in-vmware-hcx/" />
+    <author>
+      <name>eyounis</name>
+    </author>
+
+  
+    
+    <category term="VMware HCX" />
+    
+  
+
+  <summary>I’ve received several questions lately on what happens to a VM’s Managed Object Reference (MoRef) ID and InstanceUUID when it’s migrated across different vCenter Servers using VMware HCX. This information is essential for anything being used to identify VMs, such as provisioning systems, CMDBs, ticketing systems, and backup solutions are examples of tooling using this information.  When a VM ge...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>The Next Chapter</title>
+    <link href="http://localhost:4000/the-next-chapter/" rel="alternate" type="text/html" title="The Next Chapter" />
+    <published>2019-12-18T10:43:05-08:00</published>
+  
+    <updated>2019-12-18T10:43:05-08:00</updated>
+  
+    <id>http://localhost:4000/the-next-chapter/</id>
+    <content type="text/html" src="http://localhost:4000/the-next-chapter/" />
+    <author>
+      <name>eyounis</name>
+    </author>
+
+  
+    
+    <category term="Blog" />
+    
+  
+
+  <summary>Time is truly precious. With a blink of an eye, the years seem to be flying by, which makes it hard to believe in about another month marks four years at VMware for me. Its been a place with no shortage of learning and growing opportunities. I also feel incredibly blessed to have gotten the chance to work and collaborate with so many talented folks across the different business units within VMw...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>vCenter Server 6.7 Update 1 Convergence Tool</title>
+    <link href="http://localhost:4000/vcenter-server-6-7-update-1-convergence-tool/" rel="alternate" type="text/html" title="vCenter Server 6.7 Update 1 Convergence Tool" />
+    <published>2018-10-22T07:29:58-07:00</published>
+  
+    <updated>2018-10-22T07:29:58-07:00</updated>
+  
+    <id>http://localhost:4000/vcenter-server-6-7-update-1-convergence-tool/</id>
+    <content type="text/html" src="http://localhost:4000/vcenter-server-6-7-update-1-convergence-tool/" />
+    <author>
+      <name>eyounis</name>
+    </author>
+
+  
+    
+    <category term="vCenter" />
+    
+  
+
+  <summary>The embedded deployment is now VMware’s recommended deployment model for vCenter Server. This means all the required vCenter Server services are running on the same node. The release of vSphere 6.7 Update 1 introduces the convergence CLI tool. Customers with an existing external deployment can now change their topology to embedded. This deployment model also supports Enhanced Linked Mode (ELM)....</summary>
+
+  </entry>
+
+</feed>
+
+

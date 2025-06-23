@@ -1,0 +1,45 @@
+.mode-toggle {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 8px;
+
+  &:focus {
+    outline: none;
+  }
+
+  i {
+    font-size: 1.1rem;
+  }
+
+  .sun-icon {
+    color: #FF8C00;
+    display: none;
+  }
+
+  .moon-icon {
+    color: #4169E1;
+    display: none;
+  }
+}
+
+html[data-mode="dark"] .mode-toggle {
+  .sun-icon {
+    display: inline-block;
+  }
+
+  .moon-icon {
+    display: none;
+  }
+}
+
+html[data-mode="light"] .mode-toggle {
+  .sun-icon {
+    display: none;
+  }
+
+  .moon-icon {
+    display: inline-block;
+  }
+}
