@@ -154,7 +154,7 @@ pwa:
 paginate: 5
 
 # The base URL of your site
-baseurl: "https://emadyounis.com/dev/"
+baseurl: "https://emadyounis.com/sitedev/"
 
 # ------------ The following options are not recommended to be modified ------------------
 
