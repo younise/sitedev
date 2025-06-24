@@ -14,7 +14,7 @@ script_includes:
 
 {% include toc-status.html %}
 
-<article class="px-1" data-toc="{{ enable_toc }}">
+<article class="px-1" id="top" data-toc="{{ enable_toc }}">
   <header>
     <h1 data-toc-skip>{{ page.title }}</h1>
     {% if page.description %}
@@ -177,6 +177,15 @@ script_includes:
       {% include post-sharing.html lang=lang %}
     </div>
     <!-- .post-tail-bottom -->
+    
+    <!-- Back to top link -->
+    <div class="text-center mt-4 mb-3">
+      <a href="#top" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-arrow-up fa-fw me-1"></i>
+        Back to Top
+      </a>
+    </div>
+    
   </div>
   <!-- div.post-tail-wrapper -->
 </article>

@@ -400,12 +400,12 @@ header {
 }
 
 @mixin slide-out {
-  0% {
+  from {
     transform: translateY(0);
     opacity: 1;
   }
 
-  100% {
+  to {
     transform: translateY(-#{v.$topbar-height});
     opacity: 0;
   }

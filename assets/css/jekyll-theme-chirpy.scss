@@ -1,12 +1,7 @@
 ---
 ---
 
-/* prettier-ignore */
-@use 'main
-{%- if jekyll.environment == 'production' -%}
-  .bundle
-{%- endif -%}
-';
+@use 'main{% if jekyll.environment == 'production' %}.bundle{% endif %}';
 
 /* append your custom style below */
 
@@ -19,7 +14,7 @@
     z-index: 99;
   }
   
-  [data-sidebar-display] #sidebar {
+  [sidebar-display] #sidebar {
     transform: translateX(0);
   }
   
@@ -29,7 +24,7 @@
     transition: transform 0.4s ease;
   }
   
-  [data-sidebar-display] #main-wrapper {
+  [sidebar-display] #main-wrapper {
     transform: translateX(260px);
   }
   
@@ -182,3 +177,69 @@ table {
     min-height: 44px;
   }
 }
+
+/* Ensure iframe responsiveness */
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for images in posts */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Better table responsiveness */
+.post-content table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  .post-content table {
+    font-size: 0.85rem;
+  }
+  
+  .post-content table th,
+  .post-content table td {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+/* Back to Top Button Styling */
+.btn-outline-secondary {
+  transition: all 0.3s ease;
+  color: var(--link-color) !important;
+  border-color: var(--link-color) !important;
+}
+
+.btn-outline-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+  background-color: rgba(var(--link-color-rgb, 13, 110, 253), 0.1) !important;
+}
+
+/* Smooth scroll behavior for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset scroll position to account for fixed header */
+#top {
+  scroll-margin-top: 2rem;
+}
+
+/* Mask overlay for mobile sidebar */
+  #mask {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  /* Mobile topbar visibility */
