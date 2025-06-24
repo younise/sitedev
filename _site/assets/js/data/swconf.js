@@ -1,18 +1,18 @@
 const swconf = {
   
-    cacheName: 'chirpy-1750647890',resources: [
-      '/assets/css/jekyll-theme-chirpy.css',
-      '/',
+    cacheName: 'chirpy-1750730765',resources: [
+      '/https://emadyounis.com/sitedev/assets/css/jekyll-theme-chirpy.css',
+      '/https://emadyounis.com/sitedev/',
       
-        '/categories/',
+        '/https://emadyounis.com/sitedev/categories/',
       
-        '/tags/',
+        '/https://emadyounis.com/sitedev/tags/',
       
-        '/archives/',
+        '/https://emadyounis.com/sitedev/archives/',
       
-        '/about/',
+        '/https://emadyounis.com/sitedev/about/',
       
-        '/contact/',
+        '/https://emadyounis.com/sitedev/contact/',
       
 
       
