@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="VMware first introduced the vSphere Web Client with the release of vSphere 5.0. The vSphere Web Client would be the future management tool replacing the vSphere client aka “Legacy, Thick or C# Client”. This would be become more evident over time with each release of vSphere. New features could only be managed through the vSphere Web Client. While the concept of a browser based client is a step in the right direction, the dependency of flash was not. Keep in mind the decision to use flash was made when it was the standard for web applications, times and standards have changed. With that change it has taken some time to work on replatforming the vSphere Web Client. This always leads to the question, when will we see a HTML5 version of the Web Client? I’m happy to announce the wait is over!" />
 <meta property="og:description" content="VMware first introduced the vSphere Web Client with the release of vSphere 5.0. The vSphere Web Client would be the future management tool replacing the vSphere client aka “Legacy, Thick or C# Client”. This would be become more evident over time with each release of vSphere. New features could only be managed through the vSphere Web Client. While the concept of a browser based client is a step in the right direction, the dependency of flash was not. Keep in mind the decision to use flash was made when it was the standard for web applications, times and standards have changed. With that change it has taken some time to work on replatforming the vSphere Web Client. This always leads to the question, when will we see a HTML5 version of the Web Client? I’m happy to announce the wait is over!" />
-<link rel="canonical" href="http://localhost:4000/new-fling-vsphere-html5-web-client/" />
-<meta property="og:url" content="http://localhost:4000/new-fling-vsphere-html5-web-client/" />
+<link rel="canonical" href="/new-fling-vsphere-html5-web-client/" />
+<meta property="og:url" content="/new-fling-vsphere-html5-web-client/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2016/03/HTML5-Fling-icon.png" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2016-03-28T10:41:02-07:00","datePublished":"2016-03-28T10:41:02-07:00","description":"VMware first introduced the vSphere Web Client with the release of vSphere 5.0. The vSphere Web Client would be the future management tool replacing the vSphere client aka “Legacy, Thick or C# Client”. This would be become more evident over time with each release of vSphere. New features could only be managed through the vSphere Web Client. While the concept of a browser based client is a step in the right direction, the dependency of flash was not. Keep in mind the decision to use flash was made when it was the standard for web applications, times and standards have changed. With that change it has taken some time to work on replatforming the vSphere Web Client. This always leads to the question, when will we see a HTML5 version of the Web Client? I’m happy to announce the wait is over!","headline":"New Fling: vSphere HTML5 Web Client","image":"https://emadyounis.com/assets/img/2016/03/HTML5-Fling-icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/new-fling-vsphere-html5-web-client/"},"url":"http://localhost:4000/new-fling-vsphere-html5-web-client/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2016-03-28T10:41:02-07:00","datePublished":"2016-03-28T10:41:02-07:00","description":"VMware first introduced the vSphere Web Client with the release of vSphere 5.0. The vSphere Web Client would be the future management tool replacing the vSphere client aka “Legacy, Thick or C# Client”. This would be become more evident over time with each release of vSphere. New features could only be managed through the vSphere Web Client. While the concept of a browser based client is a step in the right direction, the dependency of flash was not. Keep in mind the decision to use flash was made when it was the standard for web applications, times and standards have changed. With that change it has taken some time to work on replatforming the vSphere Web Client. This always leads to the question, when will we see a HTML5 version of the Web Client? I’m happy to announce the wait is over!","headline":"New Fling: vSphere HTML5 Web Client","image":"https://emadyounis.com/assets/img/2016/03/HTML5-Fling-icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"/new-fling-vsphere-html5-web-client/"},"url":"/new-fling-vsphere-html5-web-client/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -467,14 +467,16 @@
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
   >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
+    <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-lg-block">
       
 
       
         
           
             <span>
-              <a href="/">Home</a>
+              <a href="/" style="color: var(--link-color);">
+                <i class="fas fa-home"></i>
+              </a>
             </span>
 
           
@@ -494,8 +496,17 @@
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
+    <a href="/" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
+      <i class="fas fa-home"></i>
+    </a>
+
     <div id="topbar-title">
-      Post
+      
+        <!-- Always show site name as clickable link -->
+        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
+          emadyounis.com
+        </a>
+      
     </div>
 
     <div class="d-flex align-items-center">
@@ -958,21 +969,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=New%20Fling:%20vSphere%20HTML5%20Web%20Client%20-%20emadyounis.com&url=http%3A%2F%2Flocalhost%3A4000%2Fnew-fling-vsphere-html5-web-client%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=New%20Fling:%20vSphere%20HTML5%20Web%20Client%20-%20emadyounis.com&url=%2Fnew-fling-vsphere-html5-web-client%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=New%20Fling:%20vSphere%20HTML5%20Web%20Client%20-%20emadyounis.com&u=http%3A%2F%2Flocalhost%3A4000%2Fnew-fling-vsphere-html5-web-client%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=New%20Fling:%20vSphere%20HTML5%20Web%20Client%20-%20emadyounis.com&u=%2Fnew-fling-vsphere-html5-web-client%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fnew-fling-vsphere-html5-web-client%2F&text=New%20Fling:%20vSphere%20HTML5%20Web%20Client%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fnew-fling-vsphere-html5-web-client%2F&text=New%20Fling:%20vSphere%20HTML5%20Web%20Client%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -5712,11 +5723,16 @@
 
 
 <script>
-  
   document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchWrapper = document.getElementById('search-result-wrapper');
+    
+    if (!searchInput || !searchResults) return;
+    
     SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
+      searchInput: searchInput,
+      resultsContainer: searchResults,
       json: '/assets/js/data/search.json',
       searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
       noResultsText: '<p class="mt-5">Oops! No results found.</p>',

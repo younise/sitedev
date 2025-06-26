@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Last month Google announced a first-party and fully managed solution called Google Cloud VMware Engine (GCVE), which was in limited early access since January 2020. Google Cloud VMware Engine is now generally available to all starting in US-east and US-west regions with plans to add eight more regions by the end of the year. When deployed, customers will receive a GCVE private cloud, which consists of ESXi Hosts, vCenter Server, vSAN, and NSX-T running on Google Cloud bare metal. Also included is VMware HCX, which allows customers to extend and migrate workloads from on-premises to GCVE and between GCVE private clouds." />
 <meta property="og:description" content="Last month Google announced a first-party and fully managed solution called Google Cloud VMware Engine (GCVE), which was in limited early access since January 2020. Google Cloud VMware Engine is now generally available to all starting in US-east and US-west regions with plans to add eight more regions by the end of the year. When deployed, customers will receive a GCVE private cloud, which consists of ESXi Hosts, vCenter Server, vSAN, and NSX-T running on Google Cloud bare metal. Also included is VMware HCX, which allows customers to extend and migrate workloads from on-premises to GCVE and between GCVE private clouds." />
-<link rel="canonical" href="http://localhost:4000/introduction-to-google-cloud-vmware-engine/" />
-<meta property="og:url" content="http://localhost:4000/introduction-to-google-cloud-vmware-engine/" />
+<link rel="canonical" href="/introduction-to-google-cloud-vmware-engine/" />
+<meta property="og:url" content="/introduction-to-google-cloud-vmware-engine/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2020/07/GCVE-Feature-Image.jpg" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2020-07-06T11:22:26-07:00","datePublished":"2020-07-06T11:22:26-07:00","description":"Last month Google announced a first-party and fully managed solution called Google Cloud VMware Engine (GCVE), which was in limited early access since January 2020. Google Cloud VMware Engine is now generally available to all starting in US-east and US-west regions with plans to add eight more regions by the end of the year. When deployed, customers will receive a GCVE private cloud, which consists of ESXi Hosts, vCenter Server, vSAN, and NSX-T running on Google Cloud bare metal. Also included is VMware HCX, which allows customers to extend and migrate workloads from on-premises to GCVE and between GCVE private clouds.","headline":"Introduction to Google Cloud VMware Engine","image":"https://emadyounis.com/assets/img/2020/07/GCVE-Feature-Image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/introduction-to-google-cloud-vmware-engine/"},"url":"http://localhost:4000/introduction-to-google-cloud-vmware-engine/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2020-07-06T11:22:26-07:00","datePublished":"2020-07-06T11:22:26-07:00","description":"Last month Google announced a first-party and fully managed solution called Google Cloud VMware Engine (GCVE), which was in limited early access since January 2020. Google Cloud VMware Engine is now generally available to all starting in US-east and US-west regions with plans to add eight more regions by the end of the year. When deployed, customers will receive a GCVE private cloud, which consists of ESXi Hosts, vCenter Server, vSAN, and NSX-T running on Google Cloud bare metal. Also included is VMware HCX, which allows customers to extend and migrate workloads from on-premises to GCVE and between GCVE private clouds.","headline":"Introduction to Google Cloud VMware Engine","image":"https://emadyounis.com/assets/img/2020/07/GCVE-Feature-Image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"/introduction-to-google-cloud-vmware-engine/"},"url":"/introduction-to-google-cloud-vmware-engine/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -474,14 +474,16 @@
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
   >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
+    <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-lg-block">
       
 
       
         
           
             <span>
-              <a href="/">Home</a>
+              <a href="/" style="color: var(--link-color);">
+                <i class="fas fa-home"></i>
+              </a>
             </span>
 
           
@@ -501,8 +503,17 @@
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
+    <a href="/" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
+      <i class="fas fa-home"></i>
+    </a>
+
     <div id="topbar-title">
-      Post
+      
+        <!-- Always show site name as clickable link -->
+        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
+          emadyounis.com
+        </a>
+      
     </div>
 
     <div class="d-flex align-items-center">
@@ -1592,21 +1603,21 @@ Part of the <a href="https://cloud.google.com/vmware-engine/sla"><span data-pres
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Introduction%20to%20Google%20Cloud%20VMware%20Engine%20-%20emadyounis.com&url=http%3A%2F%2Flocalhost%3A4000%2Fintroduction-to-google-cloud-vmware-engine%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Introduction%20to%20Google%20Cloud%20VMware%20Engine%20-%20emadyounis.com&url=%2Fintroduction-to-google-cloud-vmware-engine%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Introduction%20to%20Google%20Cloud%20VMware%20Engine%20-%20emadyounis.com&u=http%3A%2F%2Flocalhost%3A4000%2Fintroduction-to-google-cloud-vmware-engine%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Introduction%20to%20Google%20Cloud%20VMware%20Engine%20-%20emadyounis.com&u=%2Fintroduction-to-google-cloud-vmware-engine%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fintroduction-to-google-cloud-vmware-engine%2F&text=Introduction%20to%20Google%20Cloud%20VMware%20Engine%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fintroduction-to-google-cloud-vmware-engine%2F&text=Introduction%20to%20Google%20Cloud%20VMware%20Engine%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -6490,11 +6501,16 @@ Part of the <a href="https://cloud.google.com/vmware-engine/sla"><span data-pres
 
 
 <script>
-  
   document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchWrapper = document.getElementById('search-result-wrapper');
+    
+    if (!searchInput || !searchResults) return;
+    
     SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
+      searchInput: searchInput,
+      resultsContainer: searchResults,
       json: '/assets/js/data/search.json',
       searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
       noResultsText: '<p class="mt-5">Oops! No results found.</p>',

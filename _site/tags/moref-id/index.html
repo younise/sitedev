@@ -34,15 +34,15 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
 <meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="http://localhost:4000/tags/moref-id/" />
-<meta property="og:url" content="http://localhost:4000/tags/moref-id/" />
+<link rel="canonical" href="/tags/moref-id/" />
+<meta property="og:url" content="/tags/moref-id/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="MoREF ID" />
 <meta name="twitter:site" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"MoREF ID","url":"http://localhost:4000/tags/moref-id/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"MoREF ID","url":"/tags/moref-id/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -423,14 +423,16 @@
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
   >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
+    <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-lg-block">
       
 
       
         
           
             <span>
-              <a href="/">Home</a>
+              <a href="/" style="color: var(--link-color);">
+                <i class="fas fa-home"></i>
+              </a>
             </span>
 
           
@@ -456,8 +458,17 @@
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
+    <a href="/" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
+      <i class="fas fa-home"></i>
+    </a>
+
     <div id="topbar-title">
-      Tag
+      
+        <!-- Always show site name as clickable link -->
+        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
+          emadyounis.com
+        </a>
+      
     </div>
 
     <div class="d-flex align-items-center">
@@ -4888,11 +4899,16 @@
 
 
 <script>
-  
   document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchWrapper = document.getElementById('search-result-wrapper');
+    
+    if (!searchInput || !searchResults) return;
+    
     SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
+      searchInput: searchInput,
+      resultsContainer: searchResults,
       json: '/assets/js/data/search.json',
       searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
       noResultsText: '<p class="mt-5">Oops! No results found.</p>',

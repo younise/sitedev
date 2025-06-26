@@ -170,10 +170,33 @@
   }
 }
 
-[data-sidebar-display] {
+body[data-sidebar-display] {
+  #sidebar {
+    @include bp.lt(bp.get(lg)) {
+      transform: translateX(0);
+      z-index: 9999;
+    }
+  }
+
   #main-wrapper {
     @include bp.lt(bp.get(lg)) {
       transform: translateX(v.$sidebar-width);
     }
+  }
+
+  // Debug: make mask visible and clickable
+  #mask {
+    @include bp.lt(bp.get(lg)) {
+      background: rgba(0, 0, 0, 0.3) !important;
+      z-index: 9998 !important;
+    }
+  }
+}
+
+// Hide sidebar on mobile/tablet by default
+@include bp.lt(bp.get(lg)) {
+  #sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
   }
 }

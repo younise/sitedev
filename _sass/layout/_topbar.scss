@@ -67,6 +67,15 @@
   width: 70%;
   word-break: keep-all;
 
+  // Hover effect for the site name link
+  a {
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   @include bp.lt(bp.get(lg)) {
     display: block;
   }

@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Like other VMware products, VIO leverages Single Sign On (SSO). Luckily, the SSO configuration with VIO is fairly simple. When used with vSphere 5.5 it requires IP or FQDN of your vSphere SSO along with port 7444. With vSphere 6.0 you don’t have to use a port, it’s that easy. I ran into this error while installing VIO. Here is the process I went through." />
 <meta property="og:description" content="Like other VMware products, VIO leverages Single Sign On (SSO). Luckily, the SSO configuration with VIO is fairly simple. When used with vSphere 5.5 it requires IP or FQDN of your vSphere SSO along with port 7444. With vSphere 6.0 you don’t have to use a port, it’s that easy. I ran into this error while installing VIO. Here is the process I went through." />
-<link rel="canonical" href="http://localhost:4000/vmware-integrated-openstack-vio-sso-error/" />
-<meta property="og:url" content="http://localhost:4000/vmware-integrated-openstack-vio-sso-error/" />
+<link rel="canonical" href="/vmware-integrated-openstack-vio-sso-error/" />
+<meta property="og:url" content="/vmware-integrated-openstack-vio-sso-error/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2015/08/SSO-with-VIO-Graphic.png" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2015-08-12T08:56:50-07:00","datePublished":"2015-08-12T08:56:50-07:00","description":"Like other VMware products, VIO leverages Single Sign On (SSO). Luckily, the SSO configuration with VIO is fairly simple. When used with vSphere 5.5 it requires IP or FQDN of your vSphere SSO along with port 7444. With vSphere 6.0 you don’t have to use a port, it’s that easy. I ran into this error while installing VIO. Here is the process I went through.","headline":"VMware Integrated OpenStack (VIO) SSO Error","image":"https://emadyounis.com/assets/img/2015/08/SSO-with-VIO-Graphic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vmware-integrated-openstack-vio-sso-error/"},"url":"http://localhost:4000/vmware-integrated-openstack-vio-sso-error/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2015-08-12T08:56:50-07:00","datePublished":"2015-08-12T08:56:50-07:00","description":"Like other VMware products, VIO leverages Single Sign On (SSO). Luckily, the SSO configuration with VIO is fairly simple. When used with vSphere 5.5 it requires IP or FQDN of your vSphere SSO along with port 7444. With vSphere 6.0 you don’t have to use a port, it’s that easy. I ran into this error while installing VIO. Here is the process I went through.","headline":"VMware Integrated OpenStack (VIO) SSO Error","image":"https://emadyounis.com/assets/img/2015/08/SSO-with-VIO-Graphic.png","mainEntityOfPage":{"@type":"WebPage","@id":"/vmware-integrated-openstack-vio-sso-error/"},"url":"/vmware-integrated-openstack-vio-sso-error/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -467,14 +467,16 @@
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
   >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
+    <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-lg-block">
       
 
       
         
           
             <span>
-              <a href="/">Home</a>
+              <a href="/" style="color: var(--link-color);">
+                <i class="fas fa-home"></i>
+              </a>
             </span>
 
           
@@ -494,8 +496,17 @@
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
+    <a href="/" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
+      <i class="fas fa-home"></i>
+    </a>
+
     <div id="topbar-title">
-      Post
+      
+        <!-- Always show site name as clickable link -->
+        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
+          emadyounis.com
+        </a>
+      
     </div>
 
     <div class="d-flex align-items-center">
@@ -1461,21 +1472,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=VMware%20Integrated%20OpenStack%20(VIO)%20SSO%20Error%20-%20emadyounis.com&url=http%3A%2F%2Flocalhost%3A4000%2Fvmware-integrated-openstack-vio-sso-error%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=VMware%20Integrated%20OpenStack%20(VIO)%20SSO%20Error%20-%20emadyounis.com&url=%2Fvmware-integrated-openstack-vio-sso-error%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=VMware%20Integrated%20OpenStack%20(VIO)%20SSO%20Error%20-%20emadyounis.com&u=http%3A%2F%2Flocalhost%3A4000%2Fvmware-integrated-openstack-vio-sso-error%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=VMware%20Integrated%20OpenStack%20(VIO)%20SSO%20Error%20-%20emadyounis.com&u=%2Fvmware-integrated-openstack-vio-sso-error%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fvmware-integrated-openstack-vio-sso-error%2F&text=VMware%20Integrated%20OpenStack%20(VIO)%20SSO%20Error%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fvmware-integrated-openstack-vio-sso-error%2F&text=VMware%20Integrated%20OpenStack%20(VIO)%20SSO%20Error%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -6347,11 +6358,16 @@
 
 
 <script>
-  
   document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchWrapper = document.getElementById('search-result-wrapper');
+    
+    if (!searchInput || !searchResults) return;
+    
     SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
+      searchInput: searchInput,
+      resultsContainer: searchResults,
       json: '/assets/js/data/search.json',
       searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
       noResultsText: '<p class="mt-5">Oops! No results found.</p>',

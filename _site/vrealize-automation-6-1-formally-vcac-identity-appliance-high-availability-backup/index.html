@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="In a previous post, we discussed the importance of SSO as it relates to vRA (vRealize Automation). We also demonstrated how to deploy &amp; configure the vRA identity appliance. Due to the nature of the identity appliance we need to make sure that SSO is in a high available state. There currently is no native HA feature built in, so what are our options for protecting the identity appliance you ask? Here are some options:" />
 <meta property="og:description" content="In a previous post, we discussed the importance of SSO as it relates to vRA (vRealize Automation). We also demonstrated how to deploy &amp; configure the vRA identity appliance. Due to the nature of the identity appliance we need to make sure that SSO is in a high available state. There currently is no native HA feature built in, so what are our options for protecting the identity appliance you ask? Here are some options:" />
-<link rel="canonical" href="http://localhost:4000/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/" />
-<meta property="og:url" content="http://localhost:4000/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/" />
+<link rel="canonical" href="/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/" />
+<meta property="og:url" content="/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2014-11-13T10:15:00-08:00" />
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2014-11-13T10:15:00-08:00","datePublished":"2014-11-13T10:15:00-08:00","description":"In a previous post, we discussed the importance of SSO as it relates to vRA (vRealize Automation). We also demonstrated how to deploy &amp; configure the vRA identity appliance. Due to the nature of the identity appliance we need to make sure that SSO is in a high available state. There currently is no native HA feature built in, so what are our options for protecting the identity appliance you ask? Here are some options:","headline":"vRealize Automation 6.1 (formally vCAC) – Identity Appliance High Availability &#038; Backup","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/"},"url":"http://localhost:4000/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2014-11-13T10:15:00-08:00","datePublished":"2014-11-13T10:15:00-08:00","description":"In a previous post, we discussed the importance of SSO as it relates to vRA (vRealize Automation). We also demonstrated how to deploy &amp; configure the vRA identity appliance. Due to the nature of the identity appliance we need to make sure that SSO is in a high available state. There currently is no native HA feature built in, so what are our options for protecting the identity appliance you ask? Here are some options:","headline":"vRealize Automation 6.1 (formally vCAC) – Identity Appliance High Availability &#038; Backup","mainEntityOfPage":{"@type":"WebPage","@id":"/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/"},"url":"/vrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -465,14 +465,16 @@
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
   >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
+    <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-lg-block">
       
 
       
         
           
             <span>
-              <a href="/">Home</a>
+              <a href="/" style="color: var(--link-color);">
+                <i class="fas fa-home"></i>
+              </a>
             </span>
 
           
@@ -492,8 +494,17 @@
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
+    <a href="/" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
+      <i class="fas fa-home"></i>
+    </a>
+
     <div id="topbar-title">
-      Post
+      
+        <!-- Always show site name as clickable link -->
+        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
+          emadyounis.com
+        </a>
+      
     </div>
 
     <div class="d-flex align-items-center">
@@ -976,21 +987,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=vRealize%20Automation%206.1%20(formally%20vCAC)%20&#8211;%20Identity%20Appliance%20High%20Availability%20&#038;%20Backup%20-%20emadyounis.com&url=http%3A%2F%2Flocalhost%3A4000%2Fvrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=vRealize%20Automation%206.1%20(formally%20vCAC)%20&#8211;%20Identity%20Appliance%20High%20Availability%20&#038;%20Backup%20-%20emadyounis.com&url=%2Fvrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=vRealize%20Automation%206.1%20(formally%20vCAC)%20&#8211;%20Identity%20Appliance%20High%20Availability%20&#038;%20Backup%20-%20emadyounis.com&u=http%3A%2F%2Flocalhost%3A4000%2Fvrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=vRealize%20Automation%206.1%20(formally%20vCAC)%20&#8211;%20Identity%20Appliance%20High%20Availability%20&#038;%20Backup%20-%20emadyounis.com&u=%2Fvrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fvrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup%2F&text=vRealize%20Automation%206.1%20(formally%20vCAC)%20&#8211;%20Identity%20Appliance%20High%20Availability%20&#038;%20Backup%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fvrealize-automation-6-1-formally-vcac-identity-appliance-high-availability-backup%2F&text=vRealize%20Automation%206.1%20(formally%20vCAC)%20&#8211;%20Identity%20Appliance%20High%20Availability%20&#038;%20Backup%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -5838,11 +5849,16 @@
 
 
 <script>
-  
   document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchWrapper = document.getElementById('search-result-wrapper');
+    
+    if (!searchInput || !searchResults) return;
+    
     SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
+      searchInput: searchInput,
+      resultsContainer: searchResults,
       json: '/assets/js/data/search.json',
       searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
       noResultsText: '<p class="mt-5">Oops! No results found.</p>',

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Test</title>
+    <style>
+        .search-container { margin: 20px; padding: 20px; border: 1px solid #ccc; }
+        .search-results { margin-top: 20px; }
+        .result-item { padding: 10px; border-bottom: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Jekyll Search Test</h1>
+        <input type="text" id="search-input" placeholder="Search posts..." style="width: 300px; padding: 8px;">
+        <div id="search-results" class="search-results"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Testing search...');
+            
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('search-results'),
+                json: '/assets/js/data/search.json',
+                searchResultTemplate: '<div class="result-item"><h3><a href="{url}">{title}</a></h3><p>{content}</p></div>',
+                noResultsText: '<p>No results found.</p>'
+            });
+            
+            console.log('Search initialized');
+        });
+    </script>
+</body>
+</html>
