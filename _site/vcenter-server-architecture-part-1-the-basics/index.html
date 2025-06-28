@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="With the release of vSphere 6.7 and 6.5 U2 comes architectural changes for vCenter Server. vCenter Server is going back to its roots of a simplified deployment model. vCenter Server used to be a single node deployment. The only debate was about its availability. Over time the architecture of vCenter Server has changed introducing a distributed deployment model. Core services like inventory, web client, SSO, and vCenter could run on separate nodes. vCenter Server had the potential of becoming six nodes in this model when adding the VCDB and VUM. The distributed deployment model became too complex for management, maintenance, and upgrades." />
 <meta property="og:description" content="With the release of vSphere 6.7 and 6.5 U2 comes architectural changes for vCenter Server. vCenter Server is going back to its roots of a simplified deployment model. vCenter Server used to be a single node deployment. The only debate was about its availability. Over time the architecture of vCenter Server has changed introducing a distributed deployment model. Core services like inventory, web client, SSO, and vCenter could run on separate nodes. vCenter Server had the potential of becoming six nodes in this model when adding the VCDB and VUM. The distributed deployment model became too complex for management, maintenance, and upgrades." />
-<link rel="canonical" href="/vcenter-server-architecture-part-1-the-basics/" />
-<meta property="og:url" content="/vcenter-server-architecture-part-1-the-basics/" />
+<link rel="canonical" href="http://0.0.0.0:4000/vcenter-server-architecture-part-1-the-basics/" />
+<meta property="og:url" content="http://0.0.0.0:4000/vcenter-server-architecture-part-1-the-basics/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2018/05/Ring.png" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2018-05-07T14:07:18-07:00","datePublished":"2018-05-07T14:07:18-07:00","description":"With the release of vSphere 6.7 and 6.5 U2 comes architectural changes for vCenter Server. vCenter Server is going back to its roots of a simplified deployment model. vCenter Server used to be a single node deployment. The only debate was about its availability. Over time the architecture of vCenter Server has changed introducing a distributed deployment model. Core services like inventory, web client, SSO, and vCenter could run on separate nodes. vCenter Server had the potential of becoming six nodes in this model when adding the VCDB and VUM. The distributed deployment model became too complex for management, maintenance, and upgrades.","headline":"vCenter Server Architecture Part 1 – The Basics","image":"https://emadyounis.com/assets/img/2018/05/Ring.png","mainEntityOfPage":{"@type":"WebPage","@id":"/vcenter-server-architecture-part-1-the-basics/"},"url":"/vcenter-server-architecture-part-1-the-basics/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2018-05-07T14:07:18-07:00","datePublished":"2018-05-07T14:07:18-07:00","description":"With the release of vSphere 6.7 and 6.5 U2 comes architectural changes for vCenter Server. vCenter Server is going back to its roots of a simplified deployment model. vCenter Server used to be a single node deployment. The only debate was about its availability. Over time the architecture of vCenter Server has changed introducing a distributed deployment model. Core services like inventory, web client, SSO, and vCenter could run on separate nodes. vCenter Server had the potential of becoming six nodes in this model when adding the VCDB and VUM. The distributed deployment model became too complex for management, maintenance, and upgrades.","headline":"vCenter Server Architecture Part 1 – The Basics","image":"https://emadyounis.com/assets/img/2018/05/Ring.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/vcenter-server-architecture-part-1-the-basics/"},"url":"http://0.0.0.0:4000/vcenter-server-architecture-part-1-the-basics/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -508,12 +508,8 @@
     </a>
 
     <div id="topbar-title">
-      
-        <!-- Always show site name as clickable link -->
-        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
-          emadyounis.com
-        </a>
-      
+      <!-- Always show site name on mobile/tablet, including home page -->
+      emadyounis.com
     </div>
 
     <div class="d-flex align-items-center">
@@ -1261,21 +1257,21 @@ Figure above represents the evolution of vCenter Server deployments. VMware has 
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=vCenter%20Server%20Architecture%20Part%201%20&#8211;%20The%20Basics%20-%20emadyounis.com&url=%2Fvcenter-server-architecture-part-1-the-basics%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=vCenter%20Server%20Architecture%20Part%201%20&#8211;%20The%20Basics%20-%20emadyounis.com&url=http%3A%2F%2F0.0.0.0%3A4000%2Fvcenter-server-architecture-part-1-the-basics%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=vCenter%20Server%20Architecture%20Part%201%20&#8211;%20The%20Basics%20-%20emadyounis.com&u=%2Fvcenter-server-architecture-part-1-the-basics%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=vCenter%20Server%20Architecture%20Part%201%20&#8211;%20The%20Basics%20-%20emadyounis.com&u=http%3A%2F%2F0.0.0.0%3A4000%2Fvcenter-server-architecture-part-1-the-basics%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fvcenter-server-architecture-part-1-the-basics%2F&text=vCenter%20Server%20Architecture%20Part%201%20&#8211;%20The%20Basics%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2F0.0.0.0%3A4000%2Fvcenter-server-architecture-part-1-the-basics%2F&text=vCenter%20Server%20Architecture%20Part%201%20&#8211;%20The%20Basics%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

@@ -16,19 +16,33 @@ function refresh(e) {
 }
 
 function init() {
-  if (document.querySelector('main>article[data-toc="true"]') === null) {
+  console.log('TOC: init called');
+  
+  const tocArticle = document.querySelector('main>article[data-toc="true"]');
+  console.log('TOC: article with data-toc="true" found:', !!tocArticle);
+  
+  if (tocArticle === null) {
+    console.log('TOC: No TOC article found, exiting');
     return;
   }
 
+  console.log('TOC: Desktop mode matches:', desktopMode.matches);
+  
   // Avoid create multiple instances of Tocbot. Ref: <https://github.com/tscanlin/tocbot/issues/203>
   if (desktopMode.matches) {
+    console.log('TOC: Initializing desktop mode');
     desktop.init();
   } else {
+    console.log('TOC: Initializing mobile mode');
     mobile.init();
   }
 
   const $tocWrapper = document.getElementById('toc-wrapper');
-  $tocWrapper.classList.remove('invisible');
+  console.log('TOC: toc-wrapper found:', !!$tocWrapper);
+  
+  if ($tocWrapper) {
+    $tocWrapper.classList.remove('invisible');
+  }
 
   desktopMode.onchange = refresh;
 }

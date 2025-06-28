@@ -170,7 +170,7 @@
   }
 }
 
-body[data-sidebar-display] {
+[sidebar-display] {
   #sidebar {
     @include bp.lt(bp.get(lg)) {
       transform: translateX(0);

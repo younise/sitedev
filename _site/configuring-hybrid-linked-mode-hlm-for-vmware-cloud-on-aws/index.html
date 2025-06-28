@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Hybrid Linked Mode (HLM) is a brand new feature available only for VMware Cloud on AWS (VMC), which was announced during VMworld US in August 2017. HLM provides the ability to extend an administrator’s management view from on-premises to VMC. This may sound oddly familiar if you are using Enhanced Linked Mode (ELM) in your on-premises environment. There are differences between ELM and HLM in their requirements, how they work, and what problem each is solving. William Lam has a post outlining the differences between the two features here. This post will go into detail on how to get HLM implemented." />
 <meta property="og:description" content="Hybrid Linked Mode (HLM) is a brand new feature available only for VMware Cloud on AWS (VMC), which was announced during VMworld US in August 2017. HLM provides the ability to extend an administrator’s management view from on-premises to VMC. This may sound oddly familiar if you are using Enhanced Linked Mode (ELM) in your on-premises environment. There are differences between ELM and HLM in their requirements, how they work, and what problem each is solving. William Lam has a post outlining the differences between the two features here. This post will go into detail on how to get HLM implemented." />
-<link rel="canonical" href="/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/" />
-<meta property="og:url" content="/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/" />
+<link rel="canonical" href="http://0.0.0.0:4000/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/" />
+<meta property="og:url" content="http://0.0.0.0:4000/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2017/10/Hybrid-Linked-Mode.png" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2017-10-26T06:30:45-07:00","datePublished":"2017-10-26T06:30:45-07:00","description":"Hybrid Linked Mode (HLM) is a brand new feature available only for VMware Cloud on AWS (VMC), which was announced during VMworld US in August 2017. HLM provides the ability to extend an administrator’s management view from on-premises to VMC. This may sound oddly familiar if you are using Enhanced Linked Mode (ELM) in your on-premises environment. There are differences between ELM and HLM in their requirements, how they work, and what problem each is solving. William Lam has a post outlining the differences between the two features here. This post will go into detail on how to get HLM implemented.","headline":"Configuring Hybrid Linked Mode (HLM) for VMware Cloud on AWS","image":"https://emadyounis.com/assets/img/2017/10/Hybrid-Linked-Mode.png","mainEntityOfPage":{"@type":"WebPage","@id":"/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/"},"url":"/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2017-10-26T06:30:45-07:00","datePublished":"2017-10-26T06:30:45-07:00","description":"Hybrid Linked Mode (HLM) is a brand new feature available only for VMware Cloud on AWS (VMC), which was announced during VMworld US in August 2017. HLM provides the ability to extend an administrator’s management view from on-premises to VMC. This may sound oddly familiar if you are using Enhanced Linked Mode (ELM) in your on-premises environment. There are differences between ELM and HLM in their requirements, how they work, and what problem each is solving. William Lam has a post outlining the differences between the two features here. This post will go into detail on how to get HLM implemented.","headline":"Configuring Hybrid Linked Mode (HLM) for VMware Cloud on AWS","image":"https://emadyounis.com/assets/img/2017/10/Hybrid-Linked-Mode.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/"},"url":"http://0.0.0.0:4000/configuring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -508,12 +508,8 @@
     </a>
 
     <div id="topbar-title">
-      
-        <!-- Always show site name as clickable link -->
-        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
-          emadyounis.com
-        </a>
-      
+      <!-- Always show site name on mobile/tablet, including home page -->
+      emadyounis.com
     </div>
 
     <div class="d-flex align-items-center">
@@ -2521,21 +2517,21 @@ Enter the necessary information which includes PSC FQDN, SSO Domain Name, SSO Us
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Configuring%20Hybrid%20Linked%20Mode%20(HLM)%20for%20VMware%20Cloud%20on%20AWS%20-%20emadyounis.com&url=%2Fconfiguring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Configuring%20Hybrid%20Linked%20Mode%20(HLM)%20for%20VMware%20Cloud%20on%20AWS%20-%20emadyounis.com&url=http%3A%2F%2F0.0.0.0%3A4000%2Fconfiguring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Configuring%20Hybrid%20Linked%20Mode%20(HLM)%20for%20VMware%20Cloud%20on%20AWS%20-%20emadyounis.com&u=%2Fconfiguring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Configuring%20Hybrid%20Linked%20Mode%20(HLM)%20for%20VMware%20Cloud%20on%20AWS%20-%20emadyounis.com&u=http%3A%2F%2F0.0.0.0%3A4000%2Fconfiguring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fconfiguring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws%2F&text=Configuring%20Hybrid%20Linked%20Mode%20(HLM)%20for%20VMware%20Cloud%20on%20AWS%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2F0.0.0.0%3A4000%2Fconfiguring-hybrid-linked-mode-hlm-for-vmware-cloud-on-aws%2F&text=Configuring%20Hybrid%20Linked%20Mode%20(HLM)%20for%20VMware%20Cloud%20on%20AWS%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

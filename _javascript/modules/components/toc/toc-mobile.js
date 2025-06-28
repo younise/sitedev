@@ -15,6 +15,16 @@ export class TocMobile {
   static #invisible = true;
   static #barHeight = 16 * 3; // 3rem
 
+  static get elements() {
+    return {
+      $tocBar: document.getElementById('toc-bar'),
+      $soloTrigger: document.getElementById('toc-solo-trigger'),
+      $triggers: document.getElementsByClassName('toc-trigger'),
+      $popup: document.getElementById('toc-popup'),
+      $btnClose: document.getElementById('toc-popup-close')
+    };
+  }
+
   static options = {
     tocSelector: '#toc-popup-content',
     contentSelector: '.content',

@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>/</id>
+  <id>http://0.0.0.0:4000/</id>
   <title>emadyounis.com</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-06-26T00:21:11-07:00</updated>
+  <updated>2025-06-26T22:58:40-07:00</updated>
   <author>
     <name>emad younis</name>
-    <uri>/</uri>
+    <uri>http://0.0.0.0:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="/"/>
+    href="http://0.0.0.0:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2025 emad younis </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>Overview of Azure VMware Solution Next Evolution</title>
-    <link href="/overview-of-azure-vmware-solution-next-evolution/" rel="alternate" type="text/html" title="Overview of Azure VMware Solution Next Evolution" />
+    <link href="http://0.0.0.0:4000/overview-of-azure-vmware-solution-next-evolution/" rel="alternate" type="text/html" title="Overview of Azure VMware Solution Next Evolution" />
     <published>2020-09-23T11:20:22-07:00</published>
   
     <updated>2021-03-18T12:00:00-07:00</updated>
   
-    <id>/overview-of-azure-vmware-solution-next-evolution/</id>
-    <content type="text/html" src="/overview-of-azure-vmware-solution-next-evolution/" />
+    <id>http://0.0.0.0:4000/overview-of-azure-vmware-solution-next-evolution/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/overview-of-azure-vmware-solution-next-evolution/" />
     <author>
       <name>eyounis</name>
     </author>
@@ -45,13 +45,13 @@
   
   <entry>
     <title>Introduction to Google Cloud VMware Engine</title>
-    <link href="/introduction-to-google-cloud-vmware-engine/" rel="alternate" type="text/html" title="Introduction to Google Cloud VMware Engine" />
+    <link href="http://0.0.0.0:4000/introduction-to-google-cloud-vmware-engine/" rel="alternate" type="text/html" title="Introduction to Google Cloud VMware Engine" />
     <published>2020-07-06T11:22:26-07:00</published>
   
     <updated>2020-07-06T11:22:26-07:00</updated>
   
-    <id>/introduction-to-google-cloud-vmware-engine/</id>
-    <content type="text/html" src="/introduction-to-google-cloud-vmware-engine/" />
+    <id>http://0.0.0.0:4000/introduction-to-google-cloud-vmware-engine/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/introduction-to-google-cloud-vmware-engine/" />
     <author>
       <name>eyounis</name>
     </author>
@@ -69,13 +69,13 @@
   
   <entry>
     <title>Uniquely Identifying Virtual Machines In VMware HCX</title>
-    <link href="/uniquely-identifying-virtual-machines-in-vmware-hcx/" rel="alternate" type="text/html" title="Uniquely Identifying Virtual Machines In VMware HCX" />
+    <link href="http://0.0.0.0:4000/uniquely-identifying-virtual-machines-in-vmware-hcx/" rel="alternate" type="text/html" title="Uniquely Identifying Virtual Machines In VMware HCX" />
     <published>2020-03-17T08:12:40-07:00</published>
   
     <updated>2020-03-17T08:12:40-07:00</updated>
   
-    <id>/uniquely-identifying-virtual-machines-in-vmware-hcx/</id>
-    <content type="text/html" src="/uniquely-identifying-virtual-machines-in-vmware-hcx/" />
+    <id>http://0.0.0.0:4000/uniquely-identifying-virtual-machines-in-vmware-hcx/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/uniquely-identifying-virtual-machines-in-vmware-hcx/" />
     <author>
       <name>eyounis</name>
     </author>
@@ -93,13 +93,13 @@
   
   <entry>
     <title>The Next Chapter</title>
-    <link href="/the-next-chapter/" rel="alternate" type="text/html" title="The Next Chapter" />
+    <link href="http://0.0.0.0:4000/the-next-chapter/" rel="alternate" type="text/html" title="The Next Chapter" />
     <published>2019-12-18T10:43:05-08:00</published>
   
     <updated>2019-12-18T10:43:05-08:00</updated>
   
-    <id>/the-next-chapter/</id>
-    <content type="text/html" src="/the-next-chapter/" />
+    <id>http://0.0.0.0:4000/the-next-chapter/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/the-next-chapter/" />
     <author>
       <name>eyounis</name>
     </author>
@@ -117,13 +117,13 @@
   
   <entry>
     <title>vCenter Server 6.7 Update 1 Convergence Tool</title>
-    <link href="/vcenter-server-6-7-update-1-convergence-tool/" rel="alternate" type="text/html" title="vCenter Server 6.7 Update 1 Convergence Tool" />
+    <link href="http://0.0.0.0:4000/vcenter-server-6-7-update-1-convergence-tool/" rel="alternate" type="text/html" title="vCenter Server 6.7 Update 1 Convergence Tool" />
     <published>2018-10-22T07:29:58-07:00</published>
   
     <updated>2018-10-22T07:29:58-07:00</updated>
   
-    <id>/vcenter-server-6-7-update-1-convergence-tool/</id>
-    <content type="text/html" src="/vcenter-server-6-7-update-1-convergence-tool/" />
+    <id>http://0.0.0.0:4000/vcenter-server-6-7-update-1-convergence-tool/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/vcenter-server-6-7-update-1-convergence-tool/" />
     <author>
       <name>eyounis</name>
     </author>

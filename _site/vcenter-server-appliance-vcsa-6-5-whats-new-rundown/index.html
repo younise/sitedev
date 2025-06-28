@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="During VMworld Barcelona 2016, VMware announced vSphere 6.5. With lots of new features and updates, this is one of the biggest vSphere releases we have had in a while. Leading the charge is none other than the vCenter Server Appliance (VCSA). VMware’s direction for vCenter Server is the VCSA and it’s quite evident from this release. The VCSA and its Windows counterpart remain on par when it comes to scalability. From an operational and feature perspective, the VCSA has advantages. This post is a quick rundown of the VCSA 6.5, I’ll go into more details in future blog posts. Time to take a look at what’s new and why migrate2vcsa you should 🙂" />
 <meta property="og:description" content="During VMworld Barcelona 2016, VMware announced vSphere 6.5. With lots of new features and updates, this is one of the biggest vSphere releases we have had in a while. Leading the charge is none other than the vCenter Server Appliance (VCSA). VMware’s direction for vCenter Server is the VCSA and it’s quite evident from this release. The VCSA and its Windows counterpart remain on par when it comes to scalability. From an operational and feature perspective, the VCSA has advantages. This post is a quick rundown of the VCSA 6.5, I’ll go into more details in future blog posts. Time to take a look at what’s new and why migrate2vcsa you should 🙂" />
-<link rel="canonical" href="/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/" />
-<meta property="og:url" content="/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/" />
+<link rel="canonical" href="http://0.0.0.0:4000/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/" />
+<meta property="og:url" content="http://0.0.0.0:4000/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2016/10/VCSA-6.5-Whats-New-Rundown-e1477888912313.png" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2016-10-31T07:05:53-07:00","datePublished":"2016-10-31T07:05:53-07:00","description":"During VMworld Barcelona 2016, VMware announced vSphere 6.5. With lots of new features and updates, this is one of the biggest vSphere releases we have had in a while. Leading the charge is none other than the vCenter Server Appliance (VCSA). VMware’s direction for vCenter Server is the VCSA and it’s quite evident from this release. The VCSA and its Windows counterpart remain on par when it comes to scalability. From an operational and feature perspective, the VCSA has advantages. This post is a quick rundown of the VCSA 6.5, I’ll go into more details in future blog posts. Time to take a look at what’s new and why migrate2vcsa you should 🙂","headline":"vCenter Server Appliance (VCSA) 6.5 What’s New Rundown","image":"https://emadyounis.com/assets/img/2016/10/VCSA-6.5-Whats-New-Rundown-e1477888912313.png","mainEntityOfPage":{"@type":"WebPage","@id":"/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/"},"url":"/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2016-10-31T07:05:53-07:00","datePublished":"2016-10-31T07:05:53-07:00","description":"During VMworld Barcelona 2016, VMware announced vSphere 6.5. With lots of new features and updates, this is one of the biggest vSphere releases we have had in a while. Leading the charge is none other than the vCenter Server Appliance (VCSA). VMware’s direction for vCenter Server is the VCSA and it’s quite evident from this release. The VCSA and its Windows counterpart remain on par when it comes to scalability. From an operational and feature perspective, the VCSA has advantages. This post is a quick rundown of the VCSA 6.5, I’ll go into more details in future blog posts. Time to take a look at what’s new and why migrate2vcsa you should 🙂","headline":"vCenter Server Appliance (VCSA) 6.5 What’s New Rundown","image":"https://emadyounis.com/assets/img/2016/10/VCSA-6.5-Whats-New-Rundown-e1477888912313.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/"},"url":"http://0.0.0.0:4000/vcenter-server-appliance-vcsa-6-5-whats-new-rundown/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -508,12 +508,8 @@
     </a>
 
     <div id="topbar-title">
-      
-        <!-- Always show site name as clickable link -->
-        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
-          emadyounis.com
-        </a>
-      
+      <!-- Always show site name on mobile/tablet, including home page -->
+      emadyounis.com
     </div>
 
     <div class="d-flex align-items-center">
@@ -2134,21 +2130,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=vCenter%20Server%20Appliance%20(VCSA)%206.5%20What&#8217;s%20New%20Rundown%20-%20emadyounis.com&url=%2Fvcenter-server-appliance-vcsa-6-5-whats-new-rundown%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=vCenter%20Server%20Appliance%20(VCSA)%206.5%20What&#8217;s%20New%20Rundown%20-%20emadyounis.com&url=http%3A%2F%2F0.0.0.0%3A4000%2Fvcenter-server-appliance-vcsa-6-5-whats-new-rundown%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=vCenter%20Server%20Appliance%20(VCSA)%206.5%20What&#8217;s%20New%20Rundown%20-%20emadyounis.com&u=%2Fvcenter-server-appliance-vcsa-6-5-whats-new-rundown%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=vCenter%20Server%20Appliance%20(VCSA)%206.5%20What&#8217;s%20New%20Rundown%20-%20emadyounis.com&u=http%3A%2F%2F0.0.0.0%3A4000%2Fvcenter-server-appliance-vcsa-6-5-whats-new-rundown%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fvcenter-server-appliance-vcsa-6-5-whats-new-rundown%2F&text=vCenter%20Server%20Appliance%20(VCSA)%206.5%20What&#8217;s%20New%20Rundown%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2F0.0.0.0%3A4000%2Fvcenter-server-appliance-vcsa-6-5-whats-new-rundown%2F&text=vCenter%20Server%20Appliance%20(VCSA)%206.5%20What&#8217;s%20New%20Rundown%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

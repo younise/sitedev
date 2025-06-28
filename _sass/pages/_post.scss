@@ -82,8 +82,22 @@ header {
       font-size: 1.125rem;
     }
 
+    // Improve alignment across all devices
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    
+    // Responsive adjustments
+    @include bp.lte(bp.get(sm)) {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
     .share-icons {
       display: flex;
+      align-items: center;
+      gap: 0.5rem;
 
       i {
         color: var(--btn-share-color);
@@ -93,8 +107,13 @@ header {
 
       > * {
         @extend %icon-size;
-
-        margin-left: 0.5rem;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        // Remove left margin since we're using gap
+        margin-left: 0;
 
         &:hover {
           i {
@@ -103,12 +122,28 @@ header {
         }
       }
 
-      button {
-        padding: 0;
+      a, button {
+        padding: 0.25rem;
         border: none;
-        line-height: inherit;
+        line-height: 1;
+        min-height: 2rem;
+        min-width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        transition: all 0.2s ease;
 
         @extend %cursor-pointer;
+        
+        &:hover {
+          background-color: var(--btn-bg);
+        }
+      }
+
+      button {
+        background: transparent;
       }
     } /* .share-icons */
   } /* .share-wrapper */
@@ -475,6 +510,16 @@ header {
 
 .share-label {
   @include mx.label(inherit, 400, inherit);
+  
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0;
+  
+  // Responsive text size
+  @include bp.lte(bp.get(sm)) {
+    font-size: 0.9rem;
+  }
 
   &::after {
     content: ':';

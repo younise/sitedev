@@ -35,8 +35,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="In a previous post, we created a Windows Server repository for updates. This repository will serve to upgrade both the Identity Appliance and vRA Appliance(s). Before upgrading we need to ensure backups are in place. I know I’m preaching to the choir, but still need to stress the importance. We are not short of ways to backup the environment using VM snapshots (temporarily) and vSphere data protection to name a few. For SQL using a maintenance plan is also an option. The success of the upgrade relies on following the correct order. The steps below follow a simple deployment model but I will try to add areas where a distributed model differs." />
 <meta property="og:description" content="In a previous post, we created a Windows Server repository for updates. This repository will serve to upgrade both the Identity Appliance and vRA Appliance(s). Before upgrading we need to ensure backups are in place. I know I’m preaching to the choir, but still need to stress the importance. We are not short of ways to backup the environment using VM snapshots (temporarily) and vSphere data protection to name a few. For SQL using a maintenance plan is also an option. The success of the upgrade relies on following the correct order. The steps below follow a simple deployment model but I will try to add areas where a distributed model differs." />
-<link rel="canonical" href="/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/" />
-<meta property="og:url" content="/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/" />
+<link rel="canonical" href="http://0.0.0.0:4000/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/" />
+<meta property="og:url" content="http://0.0.0.0:4000/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2015/01/vRealize1.jpg" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2015-01-20T10:03:12-08:00","datePublished":"2015-01-20T10:03:12-08:00","description":"In a previous post, we created a Windows Server repository for updates. This repository will serve to upgrade both the Identity Appliance and vRA Appliance(s). Before upgrading we need to ensure backups are in place. I know I’m preaching to the choir, but still need to stress the importance. We are not short of ways to backup the environment using VM snapshots (temporarily) and vSphere data protection to name a few. For SQL using a maintenance plan is also an option. The success of the upgrade relies on following the correct order. The steps below follow a simple deployment model but I will try to add areas where a distributed model differs.","headline":"Upgrading vRealize Automation 6.1 (formally vCAC) to 6.2","image":"https://emadyounis.com/assets/img/2015/01/vRealize1.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/"},"url":"/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2015-01-20T10:03:12-08:00","datePublished":"2015-01-20T10:03:12-08:00","description":"In a previous post, we created a Windows Server repository for updates. This repository will serve to upgrade both the Identity Appliance and vRA Appliance(s). Before upgrading we need to ensure backups are in place. I know I’m preaching to the choir, but still need to stress the importance. We are not short of ways to backup the environment using VM snapshots (temporarily) and vSphere data protection to name a few. For SQL using a maintenance plan is also an option. The success of the upgrade relies on following the correct order. The steps below follow a simple deployment model but I will try to add areas where a distributed model differs.","headline":"Upgrading vRealize Automation 6.1 (formally vCAC) to 6.2","image":"https://emadyounis.com/assets/img/2015/01/vRealize1.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/"},"url":"http://0.0.0.0:4000/upgrading-vrealize-automation-6-1-formally-vcac-to-6-2/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -501,12 +501,8 @@
     </a>
 
     <div id="topbar-title">
-      
-        <!-- Always show site name as clickable link -->
-        <a href="/" class="text-decoration-none" style="color: var(--topbar-text-color);">
-          emadyounis.com
-        </a>
-      
+      <!-- Always show site name on mobile/tablet, including home page -->
+      emadyounis.com
     </div>
 
     <div class="d-flex align-items-center">
@@ -2096,21 +2092,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Upgrading%20vRealize%20Automation%206.1%20(formally%20vCAC)%20to%206.2%20-%20emadyounis.com&url=%2Fupgrading-vrealize-automation-6-1-formally-vcac-to-6-2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Upgrading%20vRealize%20Automation%206.1%20(formally%20vCAC)%20to%206.2%20-%20emadyounis.com&url=http%3A%2F%2F0.0.0.0%3A4000%2Fupgrading-vrealize-automation-6-1-formally-vcac-to-6-2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Upgrading%20vRealize%20Automation%206.1%20(formally%20vCAC)%20to%206.2%20-%20emadyounis.com&u=%2Fupgrading-vrealize-automation-6-1-formally-vcac-to-6-2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Upgrading%20vRealize%20Automation%206.1%20(formally%20vCAC)%20to%206.2%20-%20emadyounis.com&u=http%3A%2F%2F0.0.0.0%3A4000%2Fupgrading-vrealize-automation-6-1-formally-vcac-to-6-2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fupgrading-vrealize-automation-6-1-formally-vcac-to-6-2%2F&text=Upgrading%20vRealize%20Automation%206.1%20(formally%20vCAC)%20to%206.2%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2F0.0.0.0%3A4000%2Fupgrading-vrealize-automation-6-1-formally-vcac-to-6-2%2F&text=Upgrading%20vRealize%20Automation%206.1%20(formally%20vCAC)%20to%206.2%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
