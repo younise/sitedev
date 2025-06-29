@@ -1,0 +1,106 @@
+---
+layout: default
+title: 404 - Page Not Found
+permalink: /404.html
+---
+
+<div class="text-center" style="margin-top: 4rem; margin-bottom: 4rem;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div style="font-size: 8rem; color: #6c757d; margin-bottom: 2rem;">
+          🔍
+        </div>
+
+        <h1 class="display-1 fw-bold" style="color: var(--heading-color);">404</h1>
+
+        <h2 class="mb-4" style="color: var(--text-color);">
+          Oops! Page Not Found
+        </h2>
+
+        <p class="lead mb-4" style="color: var(--text-muted);">
+          The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+        </p>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <a href="{{ '/' | relative_url }}" class="btn btn-primary btn-lg px-4 me-md-2">
+            🏠 Go Home
+          </a>
+
+          <a href="{{ '/archives' | relative_url }}" class="btn btn-outline-secondary btn-lg px-4">
+            📚 Browse Archives
+          </a>
+        </div>
+
+        <div class="mt-5">
+          <h5 style="color: var(--text-color);">Quick Links</h5>
+          <div class="row mt-3">
+            <div class="col-md-4">
+              <a href="{{ '/categories' | relative_url }}" class="text-decoration-none">
+                <div class="card text-center h-100" style="background: var(--card-bg); border-color: var(--border-color);">
+                  <div class="card-body">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📂</div>
+                    <h6 class="card-title" style="color: var(--heading-color);">Categories</h6>
+                    <p class="card-text small" style="color: var(--text-muted);">Browse by topic</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a href="{{ '/tags' | relative_url }}" class="text-decoration-none">
+                <div class="card text-center h-100" style="background: var(--card-bg); border-color: var(--border-color);">
+                  <div class="card-body">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏷️</div>
+                    <h6 class="card-title" style="color: var(--heading-color);">Tags</h6>
+                    <p class="card-text small" style="color: var(--text-muted);">Find by keywords</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a href="{{ '/about' | relative_url }}" class="text-decoration-none">
+                <div class="card text-center h-100" style="background: var(--card-bg); border-color: var(--border-color);">
+                  <div class="card-body">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">ℹ️</div>
+                    <h6 class="card-title" style="color: var(--heading-color);">About</h6>
+                    <p class="card-text small" style="color: var(--text-muted);">Learn more</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <p class="small" style="color: var(--text-muted);">
+            If you believe this is an error, please 
+            <a href="mailto:your.email@example.com" style="color: var(--link-color);">contact us</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .display-1 {
+    font-size: 4rem;
+  }
+
+  .col-md-4 {
+    margin-bottom: 1rem;
+  }
+}
+</style>
