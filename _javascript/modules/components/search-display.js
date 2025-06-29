@@ -93,12 +93,18 @@ export function displaySearch() {
     search.classList.remove(FOCUS);
   });
 
-  // Coordinate with SimpleJekyllSearch for search results visibility
-  input.addEventListener('input', (e) => {
-    if (e.target.value.trim() === '') {
-      ResultSwitch.off();
+  input.addEventListener('input', () => {
+    if (input.value === '') {
+      if (isMobileView()) {
+        hints.classList.remove(UNLOADED);
+      } else {
+        ResultSwitch.off();
+      }
     } else {
       ResultSwitch.on();
+      if (isMobileView()) {
+        hints.classList.add(UNLOADED);
+      }
     }
   });
 }

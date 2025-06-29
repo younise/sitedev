@@ -2512,7 +2512,38 @@ html[data-mode=light] .mode-toggle .moon-icon {
   #sidebar-trigger,
   #search-trigger {
     display: block;
+    color: var(--sidebar-muted-color) !important;
   }
+  #sidebar-trigger:hover,
+  #search-trigger:hover {
+    color: var(--sidebar-active-color) !important;
+  }
+  #topbar .btn {
+    color: var(--sidebar-muted-color) !important;
+  }
+  #topbar .btn:hover {
+    color: var(--sidebar-active-color) !important;
+  }
+}
+
+/* Home icon consistency across all views */
+.topbar-home-icon {
+  color: var(--sidebar-muted-color) !important;
+}
+
+.topbar-home-link {
+  color: var(--sidebar-muted-color) !important;
+  text-decoration: none !important;
+}
+.topbar-home-link:hover {
+  color: var(--sidebar-active-color) !important;
+}
+
+.topbar-home-mobile {
+  color: var(--sidebar-muted-color) !important;
+}
+.topbar-home-mobile:hover {
+  color: var(--sidebar-active-color) !important;
 }
 
 .access {

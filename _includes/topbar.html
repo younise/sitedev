@@ -10,13 +10,13 @@
 
       {% if paths.size == 0 or page.layout == 'home' %}
         <!-- index page -->
-        <span style="color: var(--link-color);"><i class="fas fa-home"></i></span>
+        <span class="topbar-home-icon"><i class="fas fa-home"></i></span>
 
       {% else %}
         {% for item in paths %}
           {% if forloop.first %}
             <span>
-              <a href="{{ '/' | relative_url }}" style="color: var(--link-color);">
+              <a href="{{ '/' | relative_url }}" class="topbar-home-link">
                 <i class="fas fa-home"></i>
               </a>
             </span>
@@ -44,7 +44,7 @@
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
-    <a href="{{ '/' | relative_url }}" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
+    <a href="{{ '/' | relative_url }}" class="text-decoration-none ms-1 d-lg-none topbar-home-mobile" aria-label="Home">
       <i class="fas fa-home"></i>
     </a>
 

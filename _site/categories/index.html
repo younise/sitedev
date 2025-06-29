@@ -38,12 +38,12 @@
 <meta property="og:url" content="http://0.0.0.0:4000/categories/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-06-26T22:58:40-07:00" />
+<meta property="article:published_time" content="2025-06-29T16:24:06-07:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Categories" />
 <meta name="twitter:site" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-06-26T22:58:40-07:00","datePublished":"2025-06-26T22:58:40-07:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Categories","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/categories/"},"url":"http://0.0.0.0:4000/categories/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-06-29T16:24:06-07:00","datePublished":"2025-06-29T16:24:06-07:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Categories","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/categories/"},"url":"http://0.0.0.0:4000/categories/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -252,7 +252,7 @@
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/favicons/emad.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <a class="site-title d-block" href="/">emadyounis.com</a>
-    <p class="site-subtitle fst-italic mb-0">A text-focused Jekyll theme</p>
+    <p class="site-subtitle fst-italic mb-0"></p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -403,7 +403,7 @@
         
           
             <span>
-              <a href="/" style="color: var(--link-color);">
+              <a href="/" class="topbar-home-link">
                 <i class="fas fa-home"></i>
               </a>
             </span>
@@ -425,7 +425,7 @@
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
-    <a href="/" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
+    <a href="/" class="text-decoration-none ms-1 d-lg-none topbar-home-mobile" aria-label="Home">
       <i class="fas fa-home"></i>
     </a>
 
@@ -5653,16 +5653,11 @@
 
 
 <script>
+  
   document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-    const searchWrapper = document.getElementById('search-result-wrapper');
-    
-    if (!searchInput || !searchResults) return;
-    
     SimpleJekyllSearch({
-      searchInput: searchInput,
-      resultsContainer: searchResults,
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('search-results'),
       json: '/assets/js/data/search.json',
       searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
       noResultsText: '<p class="mt-5">Oops! No results found.</p>',

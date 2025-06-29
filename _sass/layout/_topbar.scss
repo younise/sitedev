@@ -22,8 +22,14 @@
     color: var(--text-muted-color);
     padding-left: 0.5rem;
 
-    a:hover {
-      @extend %link-hover;
+    a {
+      color: var(--sidebar-muted-color);
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--sidebar-active-color);
+        @extend %link-hover;
+      }
     }
 
     span {
@@ -82,5 +88,32 @@
 
   @include bp.lt(bp.get(lg)) {
     display: block;
+    color: var(--sidebar-muted-color) !important;
+    
+    &:hover {
+      color: var(--sidebar-active-color) !important;
+    }
+  }
+}
+
+// Make all topbar buttons consistent with sidebar colors on mobile/tablet
+@include bp.lt(bp.get(lg)) {
+  #topbar {
+    .btn {
+      color: var(--sidebar-muted-color) !important;
+      
+      &:hover {
+        color: var(--sidebar-active-color) !important;
+      }
+    }
+    
+    #sidebar-trigger,
+    #search-trigger {
+      color: var(--sidebar-muted-color) !important;
+      
+      &:hover {
+        color: var(--sidebar-active-color) !important;
+      }
+    }
   }
 }
