@@ -19,24 +19,24 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
   ><!-- Setup Open Graph image -->
 
   
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.4.1" />
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Unsupported VMware Integrated OpenStack (VIO) Configuration" />
 <meta name="author" content="Emad Younis" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="http://0.0.0.0:4000/unsupported-vmware-integrated-openstack-vio-configuration/" />
-<meta property="og:url" content="http://0.0.0.0:4000/unsupported-vmware-integrated-openstack-vio-configuration/" />
+<meta name="description" content="Emad Younis" />
+<meta property="og:description" content="Emad Younis" />
+<link rel="canonical" href="http://localhost:4000/unsupported-vmware-integrated-openstack-vio-configuration/" />
+<meta property="og:url" content="http://localhost:4000/unsupported-vmware-integrated-openstack-vio-configuration/" />
 <meta property="og:site_name" content="emadyounis.com" />
 <meta property="og:image" content="https://emadyounis.com/assets/img/2015/07/VIO-Unsupported-Config1.jpg" />
 <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2015-07-15T09:00:54-07:00","datePublished":"2015-07-15T09:00:54-07:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Unsupported VMware Integrated OpenStack (VIO) Configuration","image":"https://emadyounis.com/assets/img/2015/07/VIO-Unsupported-Config1.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/unsupported-vmware-integrated-openstack-vio-configuration/"},"url":"http://0.0.0.0:4000/unsupported-vmware-integrated-openstack-vio-configuration/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2015-07-15T09:00:54-07:00","datePublished":"2015-07-15T09:00:54-07:00","description":"Emad Younis","headline":"Unsupported VMware Integrated OpenStack (VIO) Configuration","image":"https://emadyounis.com/assets/img/2015/07/VIO-Unsupported-Config1.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/unsupported-vmware-integrated-openstack-vio-configuration/"},"url":"http://localhost:4000/unsupported-vmware-integrated-openstack-vio-configuration/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,116 +75,40 @@
 <meta name="theme-color" content="#ffffff">
 
 
-  <!-- Theme initialization -->
-  <script>
-  class Theme {
-    static get #modeKey() { return 'mode'; }
-    static get #modeAttr() { return 'data-mode'; }
-    static get #darkMedia() { return window.matchMedia('(prefers-color-scheme: dark)'); }
-    
-    static get DARK() { return 'dark'; }
-    static get LIGHT() { return 'light'; }
-    static get ID() { return 'theme-mode'; }
-
-    static get #mode() {
-      return sessionStorage.getItem(this.#modeKey) ||
-        document.documentElement.getAttribute(this.#modeAttr);
-    }
-
-    static get visualState() {
-      return this.#mode || (this.#darkMedia.matches ? this.DARK : this.LIGHT);
-    }
-
-    static #setDark() {
-      document.documentElement.setAttribute(this.#modeAttr, this.DARK);
-      sessionStorage.setItem(this.#modeKey, this.DARK);
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    }
-
-    static #setLight() {
-      document.documentElement.setAttribute(this.#modeAttr, this.LIGHT);
-      sessionStorage.setItem(this.#modeKey, this.LIGHT);
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-    }
-
-    static flip() {
-      const isDark = this.visualState === this.DARK;
-      isDark ? this.#setLight() : this.#setDark();
-      window.dispatchEvent(new CustomEvent(this.ID));
-    }
-
-    static init() {
-      const isDark = this.visualState === this.DARK;
-      isDark ? this.#setDark() : this.#setLight();
-    }
-  }
-
-  // Initialize theme immediately to prevent flash
-  Theme.init();
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('mode-toggle');
-    if (!toggle) return;
-
-    const updateState = () => {
-      const isDark = Theme.visualState === Theme.DARK;
-      toggle.setAttribute('aria-checked', isDark ? 'true' : 'false');
-    };
-
-    toggle.addEventListener('click', () => {
-      Theme.flip();
-      updateState();
-    });
-
-    window.addEventListener(Theme.ID, updateState);
-    updateState();
-  });
-</script>
-
-
-  <!-- Resource Hints -->
   
     
-      
-        <link rel="preconnect" href="https://fonts.googleapis.com" >
-      
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
-      
+      <link rel="preconnect" href="https://fonts.googleapis.com" >
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
     
-      
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" >
-      
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
     
-      
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" >
-      
-        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
-      
+      <link rel="preconnect" href="https://fonts.googleapis.com" >
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
     
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+    
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" >
+      <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" >
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+  
+
+  <!-- GA -->
   
 
   <!-- Bootstrap -->
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
-  <!-- Theme style -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
   <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
 
-  <!-- Web Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css">
-
-  <!-- 3rd-party Dependencies -->
-
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.25.0/dist/tocbot.min.css">
   
 
   
@@ -192,121 +116,156 @@
   
 
   
-    <!-- Image Popup -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+    <!-- Manific Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
   
 
-  <!-- Scripts -->
-
-  <script src="/assets/js/dist/theme.min.js"></script>
-
-  <!-- JS selector for site. -->
-
-<!-- commons -->
-
-
-
-<!-- layout specified -->
-
+  <!-- JavaScript -->
 
   
+    <!-- Switch the mode between dark and light. -->
 
-  
-    <!-- image lazy-loading & popup & clipboard -->
-    
-  
+<script type="text/javascript">
+  class ModeToggle {
+    static get MODE_KEY() {
+      return 'mode';
+    }
+    static get MODE_ATTR() {
+      return 'data-mode';
+    }
+    static get DARK_MODE() {
+      return 'dark';
+    }
+    static get LIGHT_MODE() {
+      return 'light';
+    }
+    static get ID() {
+      return 'mode-toggle';
+    }
 
+    constructor() {
+      if (this.hasMode) {
+        if (this.isDarkMode) {
+          if (!this.isSysDarkPrefer) {
+            this.setDark();
+          }
+        } else {
+          if (this.isSysDarkPrefer) {
+            this.setLight();
+          }
+        }
+      }
 
+      let self = this;
 
+      /* always follow the system prefers */
+      this.sysDarkPrefers.addEventListener('change', () => {
+        if (self.hasMode) {
+          if (self.isDarkMode) {
+            if (!self.isSysDarkPrefer) {
+              self.setDark();
+            }
+          } else {
+            if (self.isSysDarkPrefer) {
+              self.setLight();
+            }
+          }
 
+          self.clearMode();
+        }
 
+        self.notify();
+      });
+    } /* constructor() */
 
+    get sysDarkPrefers() {
+      return window.matchMedia('(prefers-color-scheme: dark)');
+    }
 
+    get isSysDarkPrefer() {
+      return this.sysDarkPrefers.matches;
+    }
 
+    get isDarkMode() {
+      return this.mode === ModeToggle.DARK_MODE;
+    }
 
+    get isLightMode() {
+      return this.mode === ModeToggle.LIGHT_MODE;
+    }
 
+    get hasMode() {
+      return this.mode != null;
+    }
 
+    get mode() {
+      return sessionStorage.getItem(ModeToggle.MODE_KEY);
+    }
 
+    /* get the current mode on screen */
+    get modeStatus() {
+      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
+        return ModeToggle.DARK_MODE;
+      } else {
+        return ModeToggle.LIGHT_MODE;
+      }
+    }
 
+    setDark() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+    }
 
+    setLight() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    }
 
-  
-    
+    clearMode() {
+      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+    }
 
-    
+    /* Notify another plugins that the theme mode has changed */
+    notify() {
+      window.postMessage(
+        {
+          direction: ModeToggle.ID,
+          message: this.modeStatus
+        },
+        '*'
+      );
+    }
 
-  
+    flipMode() {
+      if (this.hasMode) {
+        if (this.isSysDarkPrefer) {
+          if (this.isLightMode) {
+            this.clearMode();
+          } else {
+            this.setLight();
+          }
+        } else {
+          if (this.isDarkMode) {
+            this.clearMode();
+          } else {
+            this.setDark();
+          }
+        }
+      } else {
+        if (this.isSysDarkPrefer) {
+          this.setLight();
+        } else {
+          this.setDark();
+        }
+      }
 
-  
-    
+      this.notify();
+    } /* flipMode() */
+  } /* ModeToggle */
 
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
-
-
-
-
-
-
-
-<script defer src="/assets/js/dist/post.min.js"></script>
-
-
-
-<!-- Pageviews -->
-
-  
-
-  
-
-
+  const modeToggle = new ModeToggle();
+</script>
 
   
 
@@ -319,164 +278,203 @@
     <!-- The Side Bar -->
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-  <header class="profile-wrapper">
-    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/favicons/emad.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+    <header class="profile-wrapper">
+        <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/emad.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <a class="site-title d-block" href="/">emadyounis.com</a>
-    <p class="site-subtitle fst-italic mb-0">A text-focused Jekyll theme</p>
-  </header>
-  <!-- .profile-wrapper -->
+        <a class="site-title d-block" href="/">emadyounis.com</a>
+        <p class="site-subtitle fst-italic mb-0"></p>
+    </header>
+    <!-- .profile-wrapper -->
 
-  <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
-      <!-- home -->
-      <li class="nav-item">
-        <a href="/" class="nav-link">
-          <i class="fa-fw fas fa-home"></i>
-          <span>HOME</span>
+    <nav class="flex-column flex-grow-1 w-100 ps-0">
+        <ul class="nav">
+            <!-- home -->
+            <li class="nav-item">
+            <a href="/" class="nav-link">
+                <i class="fa-fw fas fa-home"></i>
+                <span>HOME</span>
+            </a>
+            </li>
+            <!-- the real tabs -->
+            
+            <li class="nav-item">
+            <a href="/categories/" class="nav-link">
+                <i class="fa-fw fas fa-stream"></i>
+                
+
+                <span>CATEGORIES</span>
+            </a>
+            </li>
+            <!-- .nav-item -->
+            
+            <li class="nav-item">
+            <a href="/tags/" class="nav-link">
+                <i class="fa-fw fas fa-tags"></i>
+                
+
+                <span>TAGS</span>
+            </a>
+            </li>
+            <!-- .nav-item -->
+            
+            <li class="nav-item">
+            <a href="/archives/" class="nav-link">
+                <i class="fa-fw fas fa-archive"></i>
+                
+
+                <span>ARCHIVES</span>
+            </a>
+            </li>
+            <!-- .nav-item -->
+            
+            <li class="nav-item">
+            <a href="/about/" class="nav-link">
+                <i class="fa-fw fas fa-info-circle"></i>
+                
+
+                <span>ABOUT</span>
+            </a>
+            </li>
+            <!-- .nav-item -->
+            
+            <li class="nav-item">
+            <a href="/contact/" class="nav-link">
+                <i class="fa-fw fas fa-envelope"></i>
+                
+
+                <span>CONTACT</span>
+            </a>
+            </li>
+            <!-- .nav-item -->
+            
+        </ul>
+    </nav>
+
+    <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+        
+        <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+            <i class="fas fa-adjust"></i>
+        </button>
+
+        
+        <span class="icon-border"></span>
+        
+        
+
+        
+        
+
+        
+        <a
+                href="https://linkedin.com/eyounis"
+                aria-label="linkedin"
+                
+
+                
+                target="_blank"
+                
+                
+
+                
+
+        
+        rel="noopener noreferrer"
+        
+        >
+        <i class="fab fa-linkedin"></i>
         </a>
-      </li>
-      <!-- the real tabs -->
-      
-        <li class="nav-item">
-          <a href="/categories/" class="nav-link">
-            <i class="fa-fw fas fa-stream"></i>
-            
-
-            <span>CATEGORIES</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      
-        <li class="nav-item">
-          <a href="/tags/" class="nav-link">
-            <i class="fa-fw fas fa-tags"></i>
-            
-
-            <span>TAGS</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      
-        <li class="nav-item">
-          <a href="/archives/" class="nav-link">
-            <i class="fa-fw fas fa-archive"></i>
-            
-
-            <span>ARCHIVES</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      
-        <li class="nav-item">
-          <a href="/about/" class="nav-link">
-            <i class="fa-fw fas fa-info-circle"></i>
-            
-
-            <span>ABOUT</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      
-        <li class="nav-item">
-          <a href="/contact/" class="nav-link">
-            <i class="fa-fw fas fa-envelope"></i>
-            
-
-            <span>CONTACT</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      
-    </ul>
-  </nav>
-  
-  <div class="stay-connected-wrapper">
-    <!-- Stay Connected section -->
-
-
-
-
-  <section>
-    <h2 class="panel-heading">Stay Connected</h2>
-    <div class="social-links-container mt-3 mb-1">
-      
+        
+        
         
 
         
-          <a href="https://www.linkedin.com/in/eyounis"
-            aria-label="linkedin"
-            target="_blank" rel="noopener noreferrer"
-            class="social-link">
-            <i class="fab fa-linkedin fa-fw"></i>
-          </a>
+        <a
+                href="https://github.com/younise"
+                aria-label="github"
+                
+
+                
+                target="_blank"
+                
+                
+
+                
+
         
-      
+        rel="noopener noreferrer"
+        
+        >
+        <i class="fab fa-github"></i>
+        </a>
+        
+        
         
 
         
-          <a href="https://github.com/younise"
-            aria-label="github"
-            target="_blank" rel="noopener noreferrer"
-            class="social-link">
-            <i class="fab fa-github fa-fw"></i>
-          </a>
+        <a
+                href="https://twitter.com/emad_younis"
+                aria-label="twitter"
+                
+
+                
+                target="_blank"
+                
+                
+
+                
+
         
-      
+        rel="noopener noreferrer"
+        
+        >
+        <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        
+        
         
 
         
-          <a href="https://twitter.com/emad_younis"
-            aria-label="twitter"
-            target="_blank" rel="noopener noreferrer"
-            class="social-link">
-            <i class="fa-brands fa-x-twitter fa-fw"></i>
-          </a>
         
-      
         
 
         
-      
-        
+        <a
+                href="/feed.xml"
+                aria-label="rss"
+                
+
+                
+
+                
 
         
-          <a href="/feed.xml"
-            aria-label="rss"
-            
-            class="social-link">
-            <i class="fas fa-rss fa-fw"></i>
-          </a>
+        >
+        <i class="fas fa-rss"></i>
+        </a>
         
-      
+        
     </div>
-  </section>
-
-
-  </div>
+    <!-- .sidebar-bottom -->
 </aside>
 <!-- #sidebar -->
-
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
         <!-- The Top Bar -->
 
-<header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
+<header id="topbar-wrapper" aria-label="Top Bar">
   <div
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
   >
-    <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-lg-block">
+    <nav id="breadcrumb" aria-label="Breadcrumb">
       
 
       
         
           
             <span>
-              <a href="/" style="color: var(--link-color);">
-                <i class="fas fa-home"></i>
-              </a>
+              <a href="/">Home</a>
             </span>
 
           
@@ -492,42 +490,30 @@
     </nav>
     <!-- endof #breadcrumb -->
 
-    <button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Sidebar">
+    <button type="button" id="sidebar-trigger" class="btn btn-link">
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
-    <a href="/" class="text-decoration-none ms-1 d-lg-none" style="color: var(--link-color);" aria-label="Home">
-      <i class="fas fa-home"></i>
-    </a>
-
     <div id="topbar-title">
-      <!-- Always show site name on mobile/tablet, including home page -->
-      emadyounis.com
+      Post
     </div>
 
-    <div class="d-flex align-items-center">
-      <button type="button" id="mode-toggle" class="mode-toggle me-3" role="switch" aria-label="Toggle dark mode">
-        <i class="fas fa-sun fa-fw sun-icon" aria-hidden="true"></i>
-        <i class="fas fa-moon fa-fw moon-icon" aria-hidden="true"></i>
-      </button>
+    <button type="button" id="search-trigger" class="btn btn-link">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
 
-      <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
-        <i class="fas fa-search fa-fw"></i>
-      </button>
-
-      <search id="search" class="align-items-center">
-        <i class="fas fa-search fa-fw"></i>
-        <input
-          class="form-control"
-          id="search-input"
-          type="search"
-          aria-label="search"
-          autocomplete="off"
-          placeholder="Search..."
-        >
-      </search>
-      <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
-    </div>
+    <search class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="Search..."
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
   </div>
 </header>
 
@@ -630,8 +616,6 @@
     
 
     
-
-    
     
 
     
@@ -692,73 +676,6 @@
     
 
     <!-- take out classes -->
-    
-
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
     
 
     
@@ -825,8 +742,6 @@
     
 
     
-
-    
     
 
     
@@ -843,11 +758,11 @@
       
 
       
-        <!-- add class to exist <a> tag -->
-        
-        
+        <!-- create the image wrapper -->
         
 
+        
+        
       
     
 
@@ -887,73 +802,6 @@
     
 
     <!-- take out classes -->
-    
-
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- add class to exist <a> tag -->
-        
-        
-        
-
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
     
 
     
@@ -1020,6 +868,67 @@
     
 
     
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- add class to exist <a> tag -->
+        
+        
+        
+
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
 
     
     
@@ -1085,6 +994,67 @@
     
 
     
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- add class to exist <a> tag -->
+        
+        
+        
+
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
 
     
     
@@ -1150,8 +1120,6 @@
     
 
     
-
-    
     
 
     
@@ -1212,8 +1180,6 @@
     
 
     <!-- take out classes -->
-    
-
     
 
     
@@ -1307,16 +1273,9 @@
 
 
 
-
-
-
-
-
-
-<article class="px-1" id="top" data-toc="false">
+<article class="px-1">
   <header>
     <h1 data-toc-skip>Unsupported VMware Integrated OpenStack (VIO) Configuration</h1>
-    
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -1374,12 +1333,8 @@
           </em>
         </span>
 
-        <div>
-          <!-- pageviews -->
-          
-
-          <!-- read time -->
-          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+        <!-- read time -->
+        <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
 
 
@@ -1403,19 +1358,18 @@
 >
   <em>2 min</em> read</span>
 
-        </div>
       </div>
+      <!-- .d-flex -->
     </div>
+    <!-- .post-meta -->
   </header>
 
-  
-
   <div class="content">
-    <p><a href="https://emadyounis.com/assets/img/2015/07/VIO-Unsupported-Config1.jpg?resize=264%2C300" class="popup img-link shimmer"><img src="https://emadyounis.com/assets/img/2015/07/VIO-Unsupported-Config1.jpg?resize=264%2C300" alt="" loading="lazy"></a></p>
+    <p><a href="https://emadyounis.com/assets/img/2015/07/VIO-Unsupported-Config1.jpg?resize=264%2C300" class="popup img-link  shimmer"><img src="https://emadyounis.com/assets/img/2015/07/VIO-Unsupported-Config1.jpg?resize=264%2C300" alt="" loading="lazy"></a></p>
 
 <p>In a perfect datacenter environment, we would all have an additional area for Dev/Test. This is not always the case and we don’t always have the resources readily available to us. Most of us get creative using what old equipment we have. Some carve out a section in their infrastructure, while others leverage the cloud. Currently I’ve been using <span style="color: #0000ff;"><strong><a href="http://www.ravellosystems.com/">Ravello</a></strong></span> as my Dev/Test area of my lab for VIO. A VIO production-ready deployment requires a significant amount of resources. These same resources may not be instantly available in some environments. The current deployment architecture of VIO requires 15 VMs with a total of 56CPUs and 192GB RAM; details can be found <strong><span style="color: #0000ff;"><a href="http://pubs.vmware.com/integrated-openstack-1/topic/com.vmware.ICbase/PDF/integrated-openstack-101-getting-started-guide.pdf">here</a></span></strong>. This doesn’t take into account if you’re using NSX. However, there are a few ways you can be conservative with VIO resources. Let me state up front: the following setup is not supported by VMware for production.</p>
 
-<p><a href="https://emadyounis.com/assets/img/2015/07/CAUTION.jpeg?resize=264%2C191" class="popup img-link shimmer"><img src="https://emadyounis.com/assets/img/2015/07/CAUTION.jpeg?resize=264%2C191" alt="" loading="lazy"></a></p>
+<p><a href="https://emadyounis.com/assets/img/2015/07/CAUTION.jpeg?resize=264%2C191" class="popup img-link  shimmer"><img src="https://emadyounis.com/assets/img/2015/07/CAUTION.jpeg?resize=264%2C191" alt="" loading="lazy"></a></p>
 
 <p><span style="text-decoration: underline;"><strong>Changing VIO Configuration Settings</strong></span></p>
 
@@ -1513,8 +1467,6 @@
         d-flex justify-content-between align-items-center mt-5 pb-2
       "
     >
-      <!-- License section removed by user request -->
-      <!-- 
       <div class="license-wrapper">
         
           
@@ -1526,7 +1478,6 @@
          by the author.
         
       </div>
-      -->
 
       <!-- Post sharing snippet -->
 
@@ -1541,22 +1492,36 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Unsupported%20VMware%20Integrated%20OpenStack%20(VIO)%20Configuration%20-%20emadyounis.com&url=http%3A%2F%2F0.0.0.0%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
-        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      <a href="https://twitter.com/intent/tweet?text=Unsupported%20VMware%20Integrated%20OpenStack%20(VIO)%20Configuration%20-%20emadyounis.com&url=http%3A%2F%2Flocalhost%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fab fa-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Unsupported%20VMware%20Integrated%20OpenStack%20(VIO)%20Configuration%20-%20emadyounis.com&u=http%3A%2F%2F0.0.0.0%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Unsupported%20VMware%20Integrated%20OpenStack%20(VIO)%20Configuration%20-%20emadyounis.com&u=http%3A%2F%2Flocalhost%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2F0.0.0.0%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F&text=Unsupported%20VMware%20Integrated%20OpenStack%20(VIO)%20Configuration%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn" aria-label="LinkedIn">
+        <i class="fa-fw fab fa-linkedin"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F&text=Unsupported%20VMware%20Integrated%20OpenStack%20(VIO)%20Configuration%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+      
+
+      <a href="https://reddit.com/submit?url=http%3A%2F%2Flocalhost%3A4000%2Funsupported-vmware-integrated-openstack-vio-configuration%2F&title=Unsupported%20VMware%20Integrated%20OpenStack%20(VIO)%20Configuration%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
+        <i class="fa-fw fab fa-reddit"></i>
       </a>
     
 
@@ -1576,15 +1541,6 @@
 
     </div>
     <!-- .post-tail-bottom -->
-    
-    <!-- Back to top link -->
-    <div class="text-center mt-4 mb-3">
-      <a href="#top" class="btn btn-outline-secondary btn-sm">
-        <i class="fas fa-arrow-up fa-fw me-1"></i>
-        Back to Top
-      </a>
-    </div>
-    
   </div>
   <!-- div.post-tail-wrapper -->
 </article>
@@ -1594,7 +1550,7 @@
           </main>
 
           <!-- panel -->
-          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
             <div class="access">
               <!-- Get 5 last posted/updated posts -->
 
@@ -3750,26 +3706,11 @@
   </section>
 
 
-              
-  <section class="toc-section">
-    <h3 class="panel-heading">Table of Contents</h3>
-    <div id="toc" class="panel-body">
-      
-      <ul class="section-nav">
-        
-      </ul>
-    </div>
-  </section>
-
-
             </div>
 
             
               
               
-
-
-
 
 
 
@@ -3806,283 +3747,6 @@
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -4111,6 +3775,282 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -4126,7 +4066,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/vmware-integrated-openstack-vio-sso-error/" class="post-preview card h-100">
+          <a href="/ravello-lab-setup-for-vmware-integrated-openstack-vio-part-1/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4138,16 +4078,24 @@
 
 <time
   
-  data-ts="1439395010"
+  data-ts="1434636059"
   data-df="ll"
   
 >
-  Aug 12, 2015
+  Jun 18, 2015
 </time>
 
-              <h4 class="pt-0 my-2">VMware Integrated OpenStack (VIO) SSO Error</h4>
+              <h4 class="pt-0 my-2">Ravello Lab Setup for VMware Integrated OpenStack (VIO) Part 1</h4>
               <div class="text-muted">
-                <p>Like other VMware products, VIO leverages Single Sign On (SSO). Luckily, the SSO configuration with VIO is fairly simple. When used with vSphere 5.5 it requires IP or FQDN of your vSphere SSO along...</p>
+                <p>
+                  
+
+
+
+
+
+                  The past few months I have been getting more familiar with OpenStack. By now it should be obvious that OpenStack will not be going away anytime soon, so it’s time to embrace it. Yes, I’m talking to...
+                </p>
               </div>
             </div>
           </a>
@@ -4175,14 +4123,22 @@
 
               <h4 class="pt-0 my-2">Ravello Lab Setup for VMware Integrated OpenStack (VIO) Part 2</h4>
               <div class="text-muted">
-                <p>Previously, we talked about the prerequisites (link) needed for a successful VIO deployment. Now that we’ve met them, let’s take things to the next level and deploy VIO. VIO is available at no cost...</p>
+                <p>
+                  
+
+
+
+
+
+                  Previously, we talked about the prerequisites (link) needed for a successful VIO deployment. Now that we’ve met them, let’s take things to the next level and deploy VIO. VIO is available at no cost...
+                </p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/ravello-lab-setup-for-vmware-integrated-openstack-vio-part-1/" class="post-preview card h-100">
+          <a href="/vmware-integrated-openstack-vio-sso-error/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4194,16 +4150,24 @@
 
 <time
   
-  data-ts="1434636059"
+  data-ts="1439395010"
   data-df="ll"
   
 >
-  Jun 18, 2015
+  Aug 12, 2015
 </time>
 
-              <h4 class="pt-0 my-2">Ravello Lab Setup for VMware Integrated OpenStack (VIO) Part 1</h4>
+              <h4 class="pt-0 my-2">VMware Integrated OpenStack (VIO) SSO Error</h4>
               <div class="text-muted">
-                <p>The past few months I have been getting more familiar with OpenStack. By now it should be obvious that OpenStack will not be going away anytime soon, so it’s time to embrace it. Yes, I’m talking to...</p>
+                <p>
+                  
+
+
+
+
+
+                  Like other VMware products, VIO leverages Single Sign On (SSO). Luckily, the SSO configuration with VIO is fairly simple. When used with vSphere 5.5 it requires IP or FQDN of your vSphere SSO along...
+                </p>
               </div>
             </div>
           </a>
@@ -4244,6 +4208,11 @@
 </nav>
 
             
+              
+              <!--  The comments switcher -->
+
+
+            
 
             <!-- The Footer -->
 
@@ -4266,7 +4235,7 @@
 
         <!-- The Search results -->
 
-<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
   <div class="col-11 content">
     <div id="search-hints">
       <!-- The trending tags list -->
@@ -6378,7 +6347,7 @@
       </aside>
     </div>
 
-    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
+    <div id="mask"></div>
 
     
       <aside
@@ -6408,11 +6377,124 @@
 
     
 
-    <!-- Embedded scripts -->
+    <!-- JavaScripts -->
+
+    <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
+
+
+
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
 
     
-      
-      <!-- The comments switcher -->
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+
+
 
 
     
@@ -6427,37 +6509,30 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-    const searchWrapper = document.getElementById('search-result-wrapper');
-    
-    if (!searchInput || !searchResults) return;
-    
-    SimpleJekyllSearch({
-      searchInput: searchInput,
-      resultsContainer: searchResults,
-      json: '/assets/js/data/search.json',
-      searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
-      noResultsText: '<p class="mt-5">Oops! No results found.</p>',
-      templateMiddleware: function(prop, value, template) {
-        if (prop === 'categories') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-          }
-        }
-
-        if (prop === 'tags') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-          }
+  /* Note: dependent library will be loaded in `js-selector.html` */
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/assets/js/data/search.json',
+    searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
+    noResultsText: '<p class="mt-5"></p>',
+    templateMiddleware: function(prop, value, template) {
+      if (prop === 'categories') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
         }
       }
-    });
+
+      if (prop === 'tags') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+        }
+      }
+    }
   });
 </script>
 
