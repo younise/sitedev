@@ -3,7 +3,7 @@
 {
   "name": "emadyounis.com",
   "short_name": "emadyounis.com",
-  "description": "Emad Younis",
+  "description": "A minimal, responsive, and powerful Jekyll theme for presenting professional writing.",
   "icons": [
     {
       "src": "/assets/img/favicons/android-chrome-192x192.png",

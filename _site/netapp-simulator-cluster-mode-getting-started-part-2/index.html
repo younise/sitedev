@@ -19,7 +19,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta
     name="viewport"
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@emad_younis" />
 <meta name="twitter:creator" content="@emad_younis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise/"},"dateModified":"2014-09-02T09:04:15-07:00","datePublished":"2014-09-02T09:04:15-07:00","description":"The first post in this series discussed how to deploy the NetApp Simulator in your vSphere environment. Now we will move forward with the configuration of the first node &amp; cluster.","headline":"NetApp Simulator Cluster Mode Getting Started Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/netapp-simulator-cluster-mode-getting-started-part-2/"},"url":"http://localhost:4000/netapp-simulator-cluster-mode-getting-started-part-2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Emad Younis","url":"https://github.com/younise"},"dateModified":"2014-09-02T09:04:15-07:00","datePublished":"2014-09-02T09:04:15-07:00","description":"The first post in this series discussed how to deploy the NetApp Simulator in your vSphere environment. Now we will move forward with the configuration of the first node &amp; cluster.","headline":"NetApp Simulator Cluster Mode Getting Started Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/netapp-simulator-cluster-mode-getting-started-part-2/"},"url":"http://localhost:4000/netapp-simulator-cluster-mode-getting-started-part-2/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -73,40 +73,47 @@
 <meta name="theme-color" content="#ffffff">
 
 
+  <!-- Resource Hints -->
   
     
-      <link rel="preconnect" href="https://fonts.googleapis.com" >
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+      
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
     
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" >
+      
     
-      <link rel="preconnect" href="https://fonts.googleapis.com" >
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+      
     
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" >
-      <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
-    
-      <link rel="preconnect" href="https://cdnjs.cloudflare.com" >
-      <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" >
-    
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
-  
-
-  <!-- GA -->
   
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+  
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-
+  <!-- Theme style -->
   <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
 
+  <!-- Web Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css">
+
+  <!-- 3rd-party Dependencies -->
+
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.25.0/dist/tocbot.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css">
   
 
   
@@ -114,156 +121,121 @@
   
 
   
-    <!-- Manific Popup -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
-  <!-- JavaScript -->
+  <!-- Scripts -->
+
+  <script src="/assets/js/dist/theme.min.js"></script>
+
+  <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
 
   
-    <!-- Switch the mode between dark and light. -->
 
-<script type="text/javascript">
-  class ModeToggle {
-    static get MODE_KEY() {
-      return 'mode';
-    }
-    static get MODE_ATTR() {
-      return 'data-mode';
-    }
-    static get DARK_MODE() {
-      return 'dark';
-    }
-    static get LIGHT_MODE() {
-      return 'light';
-    }
-    static get ID() {
-      return 'mode-toggle';
-    }
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
 
-    constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      }
 
-      let self = this;
 
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addEventListener('change', () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
 
-          self.clearMode();
-        }
 
-        self.notify();
-      });
-    } /* constructor() */
 
-    get sysDarkPrefers() {
-      return window.matchMedia('(prefers-color-scheme: dark)');
-    }
 
-    get isSysDarkPrefer() {
-      return this.sysDarkPrefers.matches;
-    }
 
-    get isDarkMode() {
-      return this.mode === ModeToggle.DARK_MODE;
-    }
 
-    get isLightMode() {
-      return this.mode === ModeToggle.LIGHT_MODE;
-    }
 
-    get hasMode() {
-      return this.mode != null;
-    }
 
-    get mode() {
-      return sessionStorage.getItem(ModeToggle.MODE_KEY);
-    }
 
-    /* get the current mode on screen */
-    get modeStatus() {
-      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.LIGHT_MODE;
-      }
-    }
 
-    setDark() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-    }
 
-    setLight() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-    }
 
-    clearMode() {
-      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
-    }
+  
+    
 
-    /* Notify another plugins that the theme mode has changed */
-    notify() {
-      window.postMessage(
-        {
-          direction: ModeToggle.ID,
-          message: this.modeStatus
-        },
-        '*'
-      );
-    }
+    
 
-    flipMode() {
-      if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
-            this.clearMode();
-          } else {
-            this.setLight();
-          }
-        } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
-        }
-      } else {
-        if (this.isSysDarkPrefer) {
-          this.setLight();
-        } else {
-          this.setDark();
-        }
-      }
+  
 
-      this.notify();
-    } /* flipMode() */
-  } /* ModeToggle */
+  
+    
 
-  const modeToggle = new ModeToggle();
-</script>
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
+
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+
+<!-- Pageviews -->
+
+  
+
+  
+
+
 
   
 
@@ -272,199 +244,128 @@
 </head>
 
 
-  <body>
+  <body class="post">
     <!-- The Side Bar -->
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-    <header class="profile-wrapper">
-        <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/emad.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+  <header class="profile-wrapper d-flex flex-column justify-content-center align-items-center">
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/emad.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-        <a class="site-title d-block" href="/">emadyounis.com</a>
-        <p class="site-subtitle fst-italic mb-0"></p>
-    </header>
-    <!-- .profile-wrapper -->
-
-    <nav class="flex-column flex-grow-1 w-100 ps-0">
-        <ul class="nav">
-            <!-- home -->
-            <li class="nav-item">
-            <a href="/" class="nav-link">
-                <i class="fa-fw fas fa-home"></i>
-                <span>HOME</span>
-            </a>
-            </li>
-            <!-- the real tabs -->
-            
-            <li class="nav-item">
-            <a href="/categories/" class="nav-link">
-                <i class="fa-fw fas fa-stream"></i>
-                
-
-                <span>CATEGORIES</span>
-            </a>
-            </li>
-            <!-- .nav-item -->
-            
-            <li class="nav-item">
-            <a href="/tags/" class="nav-link">
-                <i class="fa-fw fas fa-tags"></i>
-                
-
-                <span>TAGS</span>
-            </a>
-            </li>
-            <!-- .nav-item -->
-            
-            <li class="nav-item">
-            <a href="/archives/" class="nav-link">
-                <i class="fa-fw fas fa-archive"></i>
-                
-
-                <span>ARCHIVES</span>
-            </a>
-            </li>
-            <!-- .nav-item -->
-            
-            <li class="nav-item">
-            <a href="/about/" class="nav-link">
-                <i class="fa-fw fas fa-info-circle"></i>
-                
-
-                <span>ABOUT</span>
-            </a>
-            </li>
-            <!-- .nav-item -->
-            
-            <li class="nav-item">
-            <a href="/contact/" class="nav-link">
-                <i class="fa-fw fas fa-envelope"></i>
-                
-
-                <span>CONTACT</span>
-            </a>
-            </li>
-            <!-- .nav-item -->
-            
-        </ul>
-    </nav>
-
-    <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
-        
-        <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
-            <i class="fas fa-adjust"></i>
-        </button>
-
-        
-        <span class="icon-border"></span>
-        
-        
-
-        
-        
-
-        
-        <a
-                href="https://linkedin.com/eyounis"
-                aria-label="linkedin"
-                
-
-                
-                target="_blank"
-                
-                
-
-                
-
-        
-        rel="noopener noreferrer"
-        
-        >
-        <i class="fab fa-linkedin"></i>
-        </a>
-        
-        
-        
-
-        
-        <a
-                href="https://github.com/younise"
-                aria-label="github"
-                
-
-                
-                target="_blank"
-                
-                
-
-                
-
-        
-        rel="noopener noreferrer"
-        
-        >
-        <i class="fab fa-github"></i>
-        </a>
-        
-        
-        
-
-        
-        <a
-                href="https://twitter.com/emad_younis"
-                aria-label="twitter"
-                
-
-                
-                target="_blank"
-                
-                
-
-                
-
-        
-        rel="noopener noreferrer"
-        
-        >
-        <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        
-        
-        
-
-        
-        
-        
-
-        
-        <a
-                href="/feed.xml"
-                aria-label="rss"
-                
-
-                
-
-                
-
-        
-        >
-        <i class="fas fa-rss"></i>
-        </a>
-        
-        
+    <div class="site-title-wrap d-flex justify-content-center align-items-center w-100">
+      <a class="site-title d-block" href="/">emadyounis.com</a>
     </div>
-    <!-- .sidebar-bottom -->
+    <p class="site-subtitle fst-italic mb-0"></p>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <!-- home -->
+      <li class="nav-item">
+        <a href="/" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+      <!-- the real tabs -->
+      
+        <li class="nav-item">
+          <a href="/categories/" class="nav-link">
+            <i class="fa-fw fas fa-stream"></i>
+            
+
+            <span>CATEGORIES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/tags/" class="nav-link">
+            <i class="fa-fw fas fa-tag"></i>
+            
+
+            <span>TAGS</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/archives/" class="nav-link">
+            <i class="fa-fw fas fa-archive"></i>
+            
+
+            <span>ARCHIVES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/about/" class="nav-link">
+            <i class="fa-fw fas fa-info-circle"></i>
+            
+
+            <span>ABOUT</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+    </ul>
+  </nav>
+  
+  <div class="stay-connected-wrapper">
+    <!-- Stay Connected section -->
+    <div class="sidebar-bottom d-flex flex-column w-100 mt-auto">
+      <div class="stay-connected text-center mb-3">
+        <h6 class="text-muted mb-3" style="font-size: 14.4px; letter-spacing: 1px; font-weight: 600;">STAY CONNECTED</h6>
+        
+        <div class="social-icons d-flex justify-content-center flex-wrap align-items-center">
+          <!-- Theme Toggle -->
+          
+          <button type="button" class="btn btn-link nav-link mx-2 mb-2" aria-label="Switch Mode" id="mode-toggle" title="Toggle Theme">
+            <i class="fas fa-adjust"></i>
+          </button>
+          
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/eyounis" class="mx-2 mb-2" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          
+          <!-- Twitter -->
+          <a href="https://twitter.com/emad_younis" class="mx-2 mb-2" title="Twitter" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          
+          <!-- GitHub -->
+          <a href="https://github.com/younise" class="mx-2 mb-2" title="GitHub" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+          
+          <!-- RSS -->
+          <a href="/feed.xml" class="mx-2 mb-2" title="RSS">
+            <i class="fas fa-rss"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </aside>
 <!-- #sidebar -->
+
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
         <!-- The Top Bar -->
 
-<header id="topbar-wrapper" aria-label="Top Bar">
+<header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
   <div
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
   >
+    <button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Sidebar">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
     <nav id="breadcrumb" aria-label="Breadcrumb">
       
 
@@ -472,7 +373,9 @@
         
           
             <span>
-              <a href="/">Home</a>
+              <a href="/">
+                <i class="fas fa-home"></i>
+              </a>
             </span>
 
           
@@ -488,19 +391,15 @@
     </nav>
     <!-- endof #breadcrumb -->
 
-    <button type="button" id="sidebar-trigger" class="btn btn-link">
-      <i class="fas fa-bars fa-fw"></i>
-    </button>
-
     <div id="topbar-title">
       Post
     </div>
 
-    <button type="button" id="search-trigger" class="btn btn-link">
+    <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
       <i class="fas fa-search fa-fw"></i>
     </button>
 
-    <search class="align-items-center ms-3 ms-lg-0">
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
       <i class="fas fa-search fa-fw"></i>
       <input
         class="form-control"
@@ -517,9 +416,7 @@
 
 
         <div class="row flex-grow-1">
-          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
-            
-              <!-- Refactor the HTML structure -->
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4"><!-- Refactor the HTML structure -->
 
 
 
@@ -590,67 +487,6 @@
     
 
     
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- add class to exist <a> tag -->
-        
-        
-        
-
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
 
     
     
@@ -713,6 +549,8 @@
     
 
     <!-- take out classes -->
+    
+
     
 
     
@@ -779,67 +617,6 @@
     
 
     
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- add class to exist <a> tag -->
-        
-        
-        
-
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
 
     
     
@@ -902,6 +679,8 @@
     
 
     <!-- take out classes -->
+    
+
     
 
     
@@ -968,67 +747,6 @@
     
 
     
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- add class to exist <a> tag -->
-        
-        
-        
-
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
 
     
     
@@ -1091,6 +809,8 @@
     
 
     <!-- take out classes -->
+    
+
     
 
     
@@ -1157,67 +877,6 @@
     
 
     
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- add class to exist <a> tag -->
-        
-        
-        
-
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
 
     
     
@@ -1280,6 +939,8 @@
     
 
     <!-- take out classes -->
+    
+
     
 
     
@@ -1346,6 +1007,73 @@
     
 
     
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- add class to exist <a> tag -->
+        
+        
+        
+
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
     
 
     
@@ -1409,6 +1137,8 @@
     
 
     
+
+    
     
 
     
@@ -1469,6 +1199,203 @@
     
 
     <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- add class to exist <a> tag -->
+        
+        
+        
+
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- add class to exist <a> tag -->
+        
+        
+        
+
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- add class to exist <a> tag -->
+        
+        
+        
+
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
     
 
     
@@ -1541,9 +1468,16 @@
 
 
 
-<article class="px-1">
+
+
+
+
+
+
+<article class="px-1" data-toc="false">
   <header>
     <h1 data-toc-skip>NetApp Simulator Cluster Mode Getting Started Part 2</h1>
+    
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -1585,15 +1519,19 @@
           <em>
             
               
-                <a href="https://github.com/younise/">Emad Younis</a>
+                <a href="https://github.com/younise">Emad Younis</a>
                 
               
             
           </em>
         </span>
 
-        <!-- read time -->
-        <!-- Calculate the post's reading time, and display the word count in tooltip -->
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
 
 
@@ -1617,11 +1555,12 @@
 >
   <em>1 min</em> read</span>
 
+        </div>
       </div>
-      <!-- .d-flex -->
     </div>
-    <!-- .post-meta -->
   </header>
+
+  
 
   <div class="content">
     <p>The<span style="color: #0000ff;"> <a href="http://emadyounis.com/storage/netapp-simulator-cluster-mode-getting-started-part-1/" title="NetApp Simulator Cluster Mode Getting Started Part 1"><span style="color: #0000ff;">first post</span></a></span> in this series discussed how to deploy the NetApp Simulator in your vSphere environment. Now we will move forward with the configuration of the first node &amp; cluster.</p>
@@ -1735,18 +1674,6 @@
         d-flex justify-content-between align-items-center mt-5 pb-2
       "
     >
-      <div class="license-wrapper">
-        
-          
-
-          This post is licensed under 
-        <a href="https://creativecommons.org/licenses/by/4.0/">
-          CC BY 4.0
-        </a>
-         by the author.
-        
-      </div>
-
       <!-- Post sharing snippet -->
 
 <div class="share-wrapper d-flex align-items-center">
@@ -1761,7 +1688,7 @@
       
 
       <a href="https://twitter.com/intent/tweet?text=NetApp%20Simulator%20Cluster%20Mode%20Getting%20Started%20Part%202%20-%20emadyounis.com&url=http%3A%2F%2Flocalhost%3A4000%2Fnetapp-simulator-cluster-mode-getting-started-part-2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
-        <i class="fa-fw fab fa-twitter"></i>
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
@@ -1774,22 +1701,8 @@
 
       
 
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A4000%2Fnetapp-simulator-cluster-mode-getting-started-part-2%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn" aria-label="LinkedIn">
-        <i class="fa-fw fab fa-linkedin"></i>
-      </a>
-    
-
-      
-
       <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fnetapp-simulator-cluster-mode-getting-started-part-2%2F&text=NetApp%20Simulator%20Cluster%20Mode%20Getting%20Started%20Part%202%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
-      </a>
-    
-
-      
-
-      <a href="https://reddit.com/submit?url=http%3A%2F%2Flocalhost%3A4000%2Fnetapp-simulator-cluster-mode-getting-started-part-2%2F&title=NetApp%20Simulator%20Cluster%20Mode%20Getting%20Started%20Part%202%20-%20emadyounis.com" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
-        <i class="fa-fw fab fa-reddit"></i>
       </a>
     
 
@@ -1813,25 +1726,54 @@
   <!-- div.post-tail-wrapper -->
 </article>
 
-
-            
-          </main>
+</main>
 
           <!-- panel -->
-          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
             <div class="access">
-              <!-- Get 5 last posted/updated posts -->
+              <!-- Smart Recently Updated: 4 posts total, prioritizing posts with last_modified_at -->
 
 
 
+<!-- Get posts that have explicit last_modified_at in front matter (truly updated posts) -->
+
+
+<!-- Get all posts sorted by publication date (most recent first) -->
+
+
+<!-- Create final list, starting with updated posts -->
 
 
 
+<!-- Add updated posts first (up to MAX_SIZE) -->
 
 
+<!-- Fill remaining slots with recent posts by publication date -->
 
 
-
+  
+    
+  
+    
+      
+      
+      
+      
+    
+  
+    
+      
+      
+      
+      
+    
+  
+    
+      
+      
+      
+      
+        
 
 
 
@@ -1840,38 +1782,23 @@
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
       
         
-        
-        
         <li class="text-truncate lh-lg">
           <a href="/overview-of-azure-vmware-solution-next-evolution/">Overview of Azure VMware Solution Next Evolution</a>
         </li>
       
-        
-        
         
         <li class="text-truncate lh-lg">
           <a href="/introduction-to-google-cloud-vmware-engine/">Introduction to Google Cloud VMware Engine</a>
         </li>
       
         
-        
-        
         <li class="text-truncate lh-lg">
           <a href="/uniquely-identifying-virtual-machines-in-vmware-hcx/">Uniquely Identifying Virtual Machines In VMware HCX</a>
         </li>
       
         
-        
-        
         <li class="text-truncate lh-lg">
           <a href="/the-next-chapter/">The Next Chapter</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/vcenter-server-6-7-update-1-convergence-tool/">vCenter Server 6.7 Update 1 Convergence Tool</a>
         </li>
       
     </ul>
@@ -3983,6 +3910,9 @@
 
 
 
+
+
+
             
           </aside>
         </div>
@@ -4014,6 +3944,151 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -4067,150 +4142,6 @@
 
   
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 
 
 
@@ -4224,42 +4155,6 @@
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/netapp-simulator-cluster-mode-getting-started-part-1/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1409265272"
-  data-df="ll"
-  
->
-  Aug 28, 2014
-</time>
-
-              <h4 class="pt-0 my-2">NetApp Simulator Cluster Mode Getting Started Part 1</h4>
-              <div class="text-muted">
-                <p>
-                  
-
-
-
-
-
-                  Simulators can be very useful tools to learn most of a products features. They can also serve as test platforms for updates, scripts, migrations, etc without the fear of affecting your production e...
-                </p>
-              </div>
-            </div>
-          </a>
-        </article>
       
         <article class="col">
           <a href="/netapp-simulator-cluster-mode-getting-started-part-3/" class="post-preview card h-100">
@@ -4283,26 +4178,14 @@
 
               <h4 class="pt-0 my-2">NetApp Simulator Cluster Mode Getting Started Part 3</h4>
               <div class="text-muted">
-                <p>
-                  
-
-
-
-
-
-                  Preparing the **DataONTAP** 2nd Simulator Node 
-
-
-  Upload the 2nd node simulator files to an existing or create a new datastore.
-  Register the simulator VM (right click .vmx file and register VM)...
-                </p>
+                <p>Preparing the **DataONTAP** 2nd Simulator Node      Upload the 2nd node simulator files to an existing or create a new datastore.   Register the simulator VM (right click .vmx file and register VM)...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/unsupported-vmware-integrated-openstack-vio-configuration/" class="post-preview card h-100">
+          <a href="/netapp-simulator-cluster-mode-getting-started-part-1/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4314,26 +4197,44 @@
 
 <time
   
-  data-ts="1436976054"
+  data-ts="1409265272"
   data-df="ll"
   
 >
-  Jul 15, 2015
+  Aug 28, 2014
 </time>
 
-              <h4 class="pt-0 my-2">Unsupported VMware Integrated OpenStack (VIO) Configuration</h4>
+              <h4 class="pt-0 my-2">NetApp Simulator Cluster Mode Getting Started Part 1</h4>
               <div class="text-muted">
-                <p>
-                  
+                <p>Simulators can be very useful tools to learn most of a products features. They can also serve as test platforms for updates, scripts, migrations, etc without the fear of affecting your production e...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/vcenter-server-appliance-vcsa-6-0-update-1-rundown/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
 
 
 
 
+<time
+  
+  data-ts="1442246253"
+  data-df="ll"
+  
+>
+  Sep 14, 2015
+</time>
 
-                  
-
-In a perfect datacenter environment, we would all have an additional area for Dev/Test. This is not always the case and we don’t always have the resources readily available to us. Most of us get ...
-                </p>
+              <h4 class="pt-0 my-2">vCenter Server Appliance (VCSA) 6.0 Update 1 Rundown</h4>
+              <div class="text-muted">
+                <p>VMworld 2015 has come and gone, at least the US version. There were several sessions giving love to vCenter. This included the vCenter Server Appliance (VCSA). Here are a few of the sessions that a...</p>
               </div>
             </div>
           </a>
@@ -4374,34 +4275,34 @@ In a perfect datacenter environment, we would all have an additional area for De
 </nav>
 
             
-              
-              <!--  The comments switcher -->
-
-
-            
 
             <!-- The Footer -->
 
-<footer
-  aria-label="Site Info"
-  class="
-    d-flex flex-column justify-content-center text-muted
-    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
-  "
->
-  <p>
-    Copyright © <time>2025</time> emadyounis.com
-  </p>
+<footer>
+  <div class="footer-shell py-3">
+    <div class="footer-flex d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center text-muted gap-2 gap-lg-0">
+      <div class="footer-left">
+        <p class="mb-0">
+          Copyright © 2025
+          emadyounis.com
+        </p>
+      </div>
 
-  
+  <div class="footer-right">
+        <p class="mb-0">
+          <!--Using the <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
+          -->
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
-
           </div>
         </div>
 
         <!-- The Search results -->
 
-<div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
+<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
   <div class="col-11 content">
     <div id="search-hints">
       <!-- The trending tags list -->
@@ -6513,7 +6414,7 @@ In a perfect datacenter environment, we would all have an additional area for De
       </aside>
     </div>
 
-    <div id="mask"></div>
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
 
     
       <aside
@@ -6543,163 +6444,208 @@ In a perfect datacenter environment, we would all have an additional area for De
 
     
 
-    <!-- JavaScripts -->
-
-    <!-- JS selector for site. -->
-
-<!-- commons -->
-
-
-
-<!-- layout specified -->
-
-
-
-
-  
-
-  
-    <!-- image lazy-loading & popup & clipboard -->
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
+    <!-- Embedded scripts -->
 
     
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-
-
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
-
-
-
-
-
-
-<script defer src="/assets/js/dist/post.min.js"></script>
-
-
-
-
+      
+      <!-- The comments switcher -->
 
 
     
 
     <!--
-  Jekyll Simple Search loader
-  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+  Modern Search System - CDN Compatible Version
 -->
 
-
-
-
-
 <script>
-  /* Note: dependent library will be loaded in `js-selector.html` */
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('search-results'),
-    json: '/assets/js/data/search.json',
-    searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
-    noResultsText: '<p class="mt-5"></p>',
-    templateMiddleware: function(prop, value, template) {
-      if (prop === 'categories') {
-        if (value === '') {
-          return `${value}`;
-        } else {
-          return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-        }
-      }
+// Wait for SimpleJekyllSearch to load, then initialize our modern search
+function initializeSearchWhenReady() {
+  if (typeof SimpleJekyllSearch === 'undefined') {
+    setTimeout(initializeSearchWhenReady, 100);
+    return;
+  }
+  
+  console.log('SimpleJekyllSearch found, initializing modern search...');
+  
+  // Get all the DOM elements needed for search UI
+  const btnSbTrigger = document.getElementById('sidebar-trigger');
+  const btnSearchTrigger = document.getElementById('search-trigger');
+  const btnCancel = document.getElementById('search-cancel');
+  const content = document.querySelectorAll('#main-wrapper>.container>.row');
+  const topbarTitle = document.getElementById('topbar-title');
+  const search = document.getElementById('search');
+  const resultWrapper = document.getElementById('search-result-wrapper');
+  const results = document.getElementById('search-results');
+  const input = document.getElementById('search-input');
+  const hints = document.getElementById('search-hints');
+  const breadcrumb = document.getElementById('breadcrumb');
 
-      if (prop === 'tags') {
-        if (value === '') {
-          return `${value}`;
-        } else {
-          return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-        }
+  // CSS class names
+  const LOADED = 'd-block';
+  const UNLOADED = 'd-none';
+  const FOCUS = 'input-focus';
+  const FLEX = 'd-flex';
+  
+  // Initialize SimpleJekyllSearch
+  SimpleJekyllSearch({
+    searchInput: input,
+    resultsContainer: results,
+    json: "/assets/js/data/search.json",
+    searchResultTemplate: '<article class="px-1 py-2"><header><h3><a href="{url}">{title}</a></h3></header><p class="text-muted">{snippet}</p></article>',
+    noResultsText: '<div class="text-center"><h5>No results found</h5></div>',
+    limit: 50,
+    fuzzy: false,
+    exclude: ['date']
+  });
+
+  // Search UI Classes
+  class MobileSearchBar {
+    static on() {
+      if (btnSbTrigger) btnSbTrigger.classList.add(UNLOADED);
+      if (topbarTitle) topbarTitle.classList.add(UNLOADED);
+      if (btnSearchTrigger) btnSearchTrigger.classList.add(UNLOADED);
+      if (breadcrumb) breadcrumb.classList.add(UNLOADED);
+      if (search) search.classList.add(FLEX);
+      if (btnCancel) btnCancel.classList.add(LOADED);
+    }
+
+    static off() {
+      if (btnCancel) btnCancel.classList.remove(LOADED);
+      if (search) search.classList.remove(FLEX);
+      if (btnSbTrigger) btnSbTrigger.classList.remove(UNLOADED);
+      if (topbarTitle) topbarTitle.classList.remove(UNLOADED);
+      if (btnSearchTrigger) btnSearchTrigger.classList.remove(UNLOADED);
+      if (breadcrumb) breadcrumb.classList.remove(UNLOADED);
+    }
+  }
+
+  class ResultSwitch {
+    static resultVisible = false;
+
+    static on() {
+      if (!this.resultVisible) {
+        if (resultWrapper) resultWrapper.classList.remove(UNLOADED);
+        content.forEach((el) => {
+          el.classList.add(UNLOADED);
+        });
+        this.resultVisible = true;
       }
     }
-  });
+
+    static off() {
+      if (this.resultVisible) {
+        if (results) results.innerHTML = '';
+        if (hints && hints.classList.contains(UNLOADED)) {
+          hints.classList.remove(UNLOADED);
+        }
+        if (resultWrapper) resultWrapper.classList.add(UNLOADED);
+        content.forEach((el) => {
+          el.classList.remove(UNLOADED);
+        });
+        if (input) input.value = '';
+        this.resultVisible = false;
+      }
+    }
+  }
+
+  function isMobileView() {
+    return btnCancel && btnCancel.classList.contains(LOADED);
+  }
+
+  // Set up event listeners if elements exist
+  if (btnSearchTrigger && btnCancel && input) {
+    btnSearchTrigger.addEventListener('click', () => {
+      console.log('🔍 Search trigger clicked');
+      MobileSearchBar.on();
+      ResultSwitch.on();
+      input.focus();
+    });
+
+    btnCancel.addEventListener('click', () => {
+      console.log('❌ Search cancel clicked');
+      MobileSearchBar.off();
+      ResultSwitch.off();
+    });
+
+    input.addEventListener('focus', () => {
+      console.log('📝 Search input focused');
+      if (search) search.classList.add(FOCUS);
+    });
+
+    input.addEventListener('focusout', () => {
+      console.log('📝 Search input lost focus');
+      if (search) search.classList.remove(FOCUS);
+    });
+
+    input.addEventListener('input', () => {
+      const query = input.value;
+      console.log('🔍 Search input changed:', query);
+      
+      if (query === '') {
+        console.log('Empty query - hiding results');
+        if (isMobileView()) {
+          if (hints) hints.classList.remove(UNLOADED);
+        } else {
+          ResultSwitch.off();
+        }
+      } else {
+        console.log('Non-empty query - showing results');
+        ResultSwitch.on();
+        if (isMobileView()) {
+          if (hints) hints.classList.add(UNLOADED);
+        }
+      }
+    });
+
+    // Add event handler for search result clicks
+    if (results) {
+      results.addEventListener('click', (e) => {
+        // Check if clicked element is a search result link
+        const link = e.target.closest('a[href]');
+        if (link) {
+          console.log('🎯 Search result clicked:', link.href);
+          // Close search overlay and restore hamburger menu
+          MobileSearchBar.off();
+          ResultSwitch.off();
+        }
+      });
+    }
+
+    // Add escape key handler to close search
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isMobileView()) {
+        console.log('⌨️ Escape key pressed - closing search');
+        MobileSearchBar.off();
+        ResultSwitch.off();
+      }
+    });
+
+    console.log('Search UI event listeners attached');
+  } else {
+    console.error('Required search elements not found:', {
+      btnSearchTrigger: !!btnSearchTrigger,
+      btnCancel: !!btnCancel,
+      input: !!input
+    });
+  }
+  
+  console.log('Modern search system ready!');
+  
+  // BACKUP: Force hide breadcrumb on post pages in mobile view
+  if (document.body.classList.contains('post')) {
+    const breadcrumb = document.getElementById('breadcrumb');
+    if (breadcrumb && window.innerWidth < 992) {
+      breadcrumb.style.display = 'none';
+      console.log('🎯 JavaScript backup: Breadcrumb hidden on post page');
+    }
+  }
+}
+
+// Start initialization when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM ready, starting search initialization...');
+  initializeSearchWhenReady();
+});
 </script>
 
   </body>

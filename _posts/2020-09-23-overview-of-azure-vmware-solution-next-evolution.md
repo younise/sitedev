@@ -3,11 +3,12 @@ id: 2564
 title: 'Overview of Azure VMware Solution Next Evolution'
 date: '2020-09-23T11:20:22-07:00'
 last_modified_at: '2021-03-18T12:00:00'
+pin: true
 author: 'eyounis'
 layout: post
 guid: 'http://emadyounis.com/?p=2564'
 permalink: /overview-of-azure-vmware-solution-next-evolution/
-image: 'assets/img/2020/09/Azure_VMware_Solution_Post_Feature.png'
+image: 'https://emadyounis.com/assets/img/2020/09/Feature-Image-AVS.jpg'
 categories:
     - 'Azure VMware Solution'
 tags:
